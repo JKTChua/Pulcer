@@ -1,5 +1,4 @@
 package com.example.pulcer;
-package ;
 
 import android.os.Bundle;
 import android.app.Activity;

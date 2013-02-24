@@ -16,5 +16,21 @@
     <string name="register">Register</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    
+    <string name="validate_email_msg">Email required.</string>
+	<string name="validate_email_invalid_msg">Invalid Email.</string>
+	<string name="validate_pwd_msg">Password must be at least 6 characters and contain one digit and one capital letter.</string>
+	<string name="validate_old_pwd_msg">Please enter old password.</string>
+	<string name="validate_new_pwd_msg">Please enter new password.</string>
+	<string name="validate_cnf_pwd_msg">Please enter password confirmation.</string>
+	<string name="validate_cnf_pwd_not_match">New password and confirm password does not match.</string>
+	<string name="validate_pwd_length_msg">Password must at least 4 character long.</string>
+	<string name="validate_bday_msg">Birth date required.</string>
+	<string name="validate_name_msg">User name required.</string>
+	<string name="validate_bdate_msg">Please edit the birth date.</string>
+	<string name="validate_loggedin_user">You can not delete the main user.</string>
+	<string name="validate_search_pill">Please enter pill name.</string>
+	
+	<string name="dialog_title">Plus</string>
 
 </resources>

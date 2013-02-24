@@ -31,10 +31,6 @@
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:label="@string/title_activity_user_list"
-            android:ncom.example.pulcer.UserListrList="" >
-        </activity>
-        <activity
             android:name="com.example.pulcer.Login"
             android:label="@string/title_activity_login" >
         </activity>

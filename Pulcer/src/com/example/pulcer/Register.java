@@ -12,7 +12,6 @@ import com.me.pulcer.web.AsyncCall;
 import com.me.pulcer.web.AsyncCallListener;
 import com.me.pulcer.web.RequestMethod;
 
-import android.R;
 import android.net.ParseException;
 import android.os.Bundle;
 import android.app.Activity;
@@ -46,7 +45,7 @@ public class Register extends Activity {
 		getMenuInflater().inflate(R.menu.register, menu);
 		mEmail = (EditText)findViewById(R.id.txtRegisterEmail);
 	    mPassword = (EditText)findViewById(R.id.txtRegisterPassword);
-	    mPasswordConf = (EditText)findViewById(R.id.txtPasswordConfirm);
+	    mPasswordConf = (EditText)findViewById(R.id.txtRegisterPasswordConfirm);
 	    mMale = (Button)findViewById(R.id.btnMale);
 	    mDate = (DatePicker)findViewById(R.id.dateDob);
 	    
@@ -164,37 +163,47 @@ public class Register extends Activity {
 	
 	private boolean validate()
 	{
-		if(mName.getText().toString().trim().length()==0){
+		if(mName.getText().toString().trim().length()==0)
+		{
 			Toast.makeText(this, getString(R.string.validate_name_msg), Toast.LENGTH_SHORT).show();
 			return false;
 		}
-		if(mEmail.getText().toString().trim().length()==0){
+		if(mEmail.getText().toString().trim().length()==0)
+		{
 			Toast.makeText(this, getString(R.string.validate_email_msg), Toast.LENGTH_SHORT).show();
 			return false;
 		}
-		if(Util.validateEmail(mEmail.getText().toString())!=true){
+		if(Util.validateEmail(mEmail.getText().toString())!=true)
+		{
 			Toast.makeText(this, getString(R.string.validate_email_invalid_msg), Toast.LENGTH_SHORT).show();
 			return false;
 		}
-		if(mPassword.getText().toString().trim().length()==0){
+		if(mPassword.getText().toString().trim().length()==0)
+		{
 			Toast.makeText(this, getString(R.string.validate_pwd_msg), Toast.LENGTH_SHORT).show();
 			return false;
 		}
 		
-		if(bday_edtx.getText().toString().trim().length()==0){
+		if(dateString.length()<=0)
+		{
 			Toast.makeText(this, getString(R.string.validate_bday_msg), Toast.LENGTH_SHORT).show();
 			return false;
 		}
 		SimpleDateFormat dispFormate=new SimpleDateFormat("yyyy-MM-dd");
-		if(Util.validateStr(bday_edtx.getText().toString())){
-			try {
-				Date date=dispFormate.parse(dateString);
+		if(Util.validateStr(dateString))
+		{
+			Date date;
+			try
+			{
+				date = dispFormate.parse(dateString);
 				Date curDate=new Date();
-				if(date.getTime()>curDate.getTime()){
+				if(date.getTime()>curDate.getTime())
+				{
 					Toast.makeText(this, getString(R.string.validate_bdate_msg), Toast.LENGTH_SHORT).show();
 					return false;
 				}
-			} catch (ParseException e) {
+			} catch (java.text.ParseException e)
+			{
 			}
 		}
 		return true;
