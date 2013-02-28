@@ -31,5 +31,9 @@
     <string name="validate_search_pill">Please enter pill name.</string>
     <string name="dialog_title">Plus</string>
     <string name="title_activity_searchmed">Searchmed</string>
+<<<<<<< HEAD
+=======
+    <string name="title_activity_useragreement">MainActivity</string>
+>>>>>>> user agreement xml
 
 </resources>
