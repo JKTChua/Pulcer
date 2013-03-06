@@ -40,9 +40,8 @@ import com.google.gson.Gson;
 import com.me.pulcer.R;
 import com.the9tcat.hadi.DefaultDAO;
 
-public abstract class AsyncActivity extends Activity {
-	
-	
+public abstract class AsyncActivity extends Activity
+{	
 	static final int UPCOMMING_FILTER=101;
 	static final int TAKEN_FILTER=102;
 	static final int MISSED_FILTER=103;
@@ -164,8 +163,8 @@ public abstract class AsyncActivity extends Activity {
 		e.printStackTrace();
 	}
 	
-	protected void showErrorMessage(String message,String title){
-		
+	protected void showErrorMessage(String message,String title)
+	{
 		AlertDialog dialog=new AlertDialog.Builder(this).create();
 		dialog.setTitle(title);
 		dialog.setIcon(android.R.drawable.ic_dialog_info);
@@ -178,7 +177,6 @@ public abstract class AsyncActivity extends Activity {
 			}
 		});
 		dialog.show();
-		
 	}
 	
 	protected void  showMessageDialog(String message,DialogInterface.OnClickListener  listener) {
@@ -378,23 +376,22 @@ public abstract class AsyncActivity extends Activity {
 		});
 	}
 	
-	public void showConfirmationDialog(String message,DialogInterface.OnClickListener listener){
+	public void showConfirmationDialog(String message,DialogInterface.OnClickListener listener)
+	{
 		AlertDialog.Builder builder=new AlertDialog.Builder(this);
 		builder.setTitle(getString(R.string.app_name));
 		builder.setMessage(message);
 		builder.setPositiveButton(getString(R.string.dlg_yes), listener);
-		builder.setNegativeButton(getString(R.string.dlg_no), new DialogInterface.OnClickListener() {
-			
+		builder.setNegativeButton(getString(R.string.dlg_no), new DialogInterface.OnClickListener()
+		{
 			@Override
-			public void onClick(DialogInterface dialog, int which) {
+			public void onClick(DialogInterface dialog, int which)
+			{
 				dialog.dismiss();
 			}
 		});
 		builder.show();
-		
 	}
-	
-	
 	
 	/*public boolean chkInternet(){
 		ConnectivityManager cm =(ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

@@ -50,13 +50,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.searchmed" />
         </activity>
-<<<<<<< HEAD
-=======
         <activity
             android:name="com.example.pulcer.UseragreementActivity"
             android:label="@string/title_activity_useragreement" >
         </activity>
->>>>>>> user agreement xml
+        <activity
+            android:name="com.example.pulcer.Ulcer"
+            android:label="@string/title_activity_ulcer" >
+        </activity>
     </application>
 
 </manifest>

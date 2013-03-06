@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.Environment;
 
-import com.me.pulcer.R;
+import com.example.pulcer.R;
 import com.me.pulcer.adapter.FamilyAdapter;
 import com.me.pulcer.common.LocationHelper.LocationResult;
 import com.me.pulcer.util.ImageLoader;

@@ -36,15 +36,14 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.getplusapp.mobile.android.common.PApp;
-import com.getplusapp.mobile.android.component.PTextView;
-import com.getplusapp.mobile.android.entity.UserDetail;
-import com.getplusapp.mobile.android.parser.UserDetailParser;
+import com.me.pulcer.common.PApp;
+import com.me.pulcer.component.PTextView;
+import com.me.pulcer.entity.UserDetail;
+import com.me.pulcer.parser.UserDetailParser;
 import com.google.gson.Gson;
 
-public class Util {
-	
-	
+public class Util
+{	
 	public static String getUTCTime(){
 		SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		df.setTimeZone(TimeZone.getTimeZone("GMT"));
@@ -103,7 +102,7 @@ public class Util {
         	
         	Gson gson=new Gson();
         	String str=gson.toJson(response);
-//        	PLogger.getLogger().info("Writting Data to File:"+str);
+//        	PLogger.getLogger().info("Writing Data to File:"+str);
         	FileOutputStream   fos =context.openFileOutput(USER_DATA_FILENAME, Context.MODE_PRIVATE);
         	byte[] buffer=str.getBytes();
         	fos.write(buffer);

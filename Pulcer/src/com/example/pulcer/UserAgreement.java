@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class UseragreementActivity extends Activity {
+public class UserAgreement extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

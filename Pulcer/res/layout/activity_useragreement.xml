@@ -8,45 +8,44 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".UseragreementActivity" >
 
+    <TextView
+        android:id="@+id/lblAgreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/user_agreement"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnDecline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAccept"
+        android:layout_alignBottom="@+id/btnAccept"
+        android:layout_alignRight="@+id/txtAgreement"
+        android:text="@string/decline" />
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtAgreement"
+        android:layout_below="@+id/txtAgreement"
+        android:layout_marginTop="20dp"
+        android:text="@string/accept" />
+
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/txtAgreement"
         android:layout_width="250dp"
         android:layout_height="350dp"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/lblAgreement"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
         android:ems="10"
         android:inputType="textMultiLine" >
 
         <requestFocus />
     </EditText>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="18dp"
-        android:text="Agree" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_marginRight="24dp"
-        android:text="Disagree" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="User Agreement"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import android.database.Cursor;
 
-import com.getplusapp.mobile.android.util.PLogger;
+import com.me.pulcer.util.PLogger;
 import com.google.gson.annotations.SerializedName;
 import com.the9tcat.hadi.annotation.Column;
 import com.the9tcat.hadi.annotation.Table;

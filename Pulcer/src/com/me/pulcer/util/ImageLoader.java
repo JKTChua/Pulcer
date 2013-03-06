@@ -10,14 +10,14 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Stack;
 
+import com.example.pulcer.R;
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
 import android.widget.ImageView;
-
-import com.getplusapp.mobile.android.R;
 
 public class ImageLoader {
     
@@ -39,7 +39,7 @@ public class ImageLoader {
             cacheDir.mkdirs();
     }
     
-    final int stub_id=R.drawable.avartar_circle;
+    final int stub_id=R.drawable.avatar_circle;
     public void DisplayImage(String url, Activity activity, ImageView imageView)
     {
         if(cache.containsKey(url)){

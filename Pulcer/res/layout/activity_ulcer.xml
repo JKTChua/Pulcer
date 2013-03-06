@@ -8,28 +8,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Searchmed" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="Back" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignParentRight="true"
-        android:text="Add Date" />
-
     <ListView
-        android:id="@+id/listView1"
+        android:id="@+id/lvUlcers"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_above="@+id/button1"
+        android:layout_above="@+id/btnUlcerBack"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="28dp" >
     </ListView>
@@ -38,47 +21,45 @@
         android:id="@+id/textView2"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/listView1"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_above="@+id/lvUlcers"
+        android:layout_alignLeft="@+id/lblStage"
         android:layout_marginBottom="34dp"
         android:gravity="center"
         android:text="Description" 
         android:textAppearance="?android:attr/textAppearanceMedium"/>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/lblStage"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView2"
-        android:layout_alignLeft="@+id/listView1"
+        android:layout_alignLeft="@+id/lvUlcers"
         android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:text="Stage" 
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:text="Stage"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
+    <Button
+        android:id="@+id/btnAddDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignTop="@+id/imageButton1"
-        android:src="@drawable/ic_launcher" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/imageButton1"
-        android:src="@drawable/ic_launcher" />
+        android:text="Add Date" />
 
-    <ImageButton
-        android:id="@+id/imageButton1"
+    <Button
+        android:id="@+id/btnUlcerBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp"
-        android:src="@drawable/ic_launcher" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Back" />
+
+    <Gallery
+        android:id="@+id/gallery1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
 
 </RelativeLayout>

@@ -31,6 +31,9 @@ public class Login extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
+		mEmail = (EditText)findViewById(R.id.txtEmail);
+		mPassword   = (EditText)findViewById(R.id.txtPassword);
 	}
 
 	@Override
@@ -38,8 +41,6 @@ public class Login extends Activity
 	{
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.login, menu);
-		mEmail = (EditText)findViewById(R.id.txtEmail);
-	    mPassword   = (EditText)findViewById(R.id.txtPassword);
 		return true;
 	}
 	
