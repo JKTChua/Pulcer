@@ -1,5 +1,7 @@
 package com.me.pulcer.common;
 
+import com.example.pulcer.R;
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -14,8 +16,6 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout.LayoutParams;
-
-import com.getplusapp.mobile.android.R;
 
 public class SlideoutHelper {
 

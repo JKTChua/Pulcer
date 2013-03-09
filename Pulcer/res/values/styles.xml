@@ -16,5 +16,187 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <style name="dark_header_base">
+        <item name="android:textColor">@color/Black</item>
+    </style>
+    
+    <style name="dark_bold_header" parent="dark_header_base">
+        <item name="android:textSize">18dip</item>
+        <item name="android:textStyle">bold</item>
+    </style>  
+    
+    <style name="PlusDialog" parent="android:Theme.Dialog">
+       <item name="android:windowNoTitle">true</item>
+       <!-- <item name="android:buttonStyle">@style/PButton.White</item> -->
+       <item name="android:windowBackground">@color/transparent</item>
+       <item name="android:textAppearanceLarge">@style/Text.Big</item> 
+       <!-- <item name="android:checkboxStyle">@style/PCheckBox</item> -->
+    </style>
+    <!-- 
+    <style name="PCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+      <item name="android:button">@drawable/chk_box_selector</item>  
+    </style>
+     -->
+    <style name="PToggle" parent="@android:style/Widget.CompoundButton.CheckBox">
+      <item name="android:button">@drawable/toggle_btn_selector</item>  
+    </style>
+    
+    <style name="AddPillDialog" parent="android:Theme.Dialog">
+       <item name="android:windowNoTitle">true</item>
+       <!-- <item name="android:buttonStyle">@style/PButton.White</item> -->
+       <item name="android:windowBackground">@color/trans_1</item>
+       <item name="android:textAppearanceLarge">@style/AddPill.Text.Large</item> 
+       <item name="android:textAppearanceSmall">@style/AddPill.Text.Small</item>
+       <item name="android:textAppearanceMedium">@style/AddPill.Text.Medium</item>
+       <!-- <item name="android:windowAnimationStyle">@style/SlideDialog</item> -->
+       <!-- <item name="android:checkboxStyle">@style/PCheckBox</item> -->
+    </style>
+    
+    <!-- 
+    <style name="SlideDialog">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+    
+    <style name="ListPopup">
+        <item name="android:windowEnterAnimation">@anim/pop_slide_out</item>
+        <item name="android:windowExitAnimation">@anim/pop_slide_in</item>
+    </style>
+     -->
+    
+    <style name="PLabel.Big" parent="@android:style/TextAppearance.Large">
+         <item name="android:textSize">18dp</item>
+         <item name="android:textColor">#000000</item>
+    </style>
+    
+    <style name="PLabel.Big.Gray" parent="@android:style/TextAppearance.Large">
+         <item name="android:textSize">18dp</item>
+         <item name="android:textColor">@color/txt_gray</item>
+    </style>
+    
+     <style name="PLabel.small.Gray" parent="@android:style/TextAppearance.Large">
+         <item name="android:textSize">8dp</item>
+         <item name="android:textColor">@color/txt_gray</item>
+    </style>
+    
+    <style name="PLabel.medium" parent="@android:style/TextAppearance.Medium">
+         <item name="android:textSize">14dp</item>
+         <item name="android:textColor">@color/txt_gray</item>
+    </style>
+   
+    <!-- 
+    <style name="PButton.Green" parent="android:style/Widget.Button">
+    	<item name="android:textSize">18dip</item>
+    	<item name="android:background">@drawable/green_btn_selector</item>
+    	<item name="android:textColor">#FFFFFF</item>
+    </style>
 
+    <style name="PButton.White" parent="android:style/Widget.Button">
+        <item name="android:textSize">18dip</item>
+    	<item name="android:background">@drawable/white_btn_selector</item>
+    	<item name="android:textColor">@color/text_black</item>
+    	
+    </style>
+     -->
+   
+   
+   <style name="AddPill.Text.Large" parent="@android:style/TextAppearance.Large">
+       <item name="android:textSize">22dp</item>  
+       <item name="android:textColor">@color/dlg_txt_gray</item>  
+       
+   </style>
+   
+   <style name="AddPill.Text.Small" parent="@android:style/TextAppearance.Large">
+       <item name="android:textSize">12dp</item>  
+       <item name="android:textColor">@color/dlg_txt_gray</item>  
+       
+   </style>
+   
+   <style name="AddPill.Text.Medium" parent="@android:style/TextAppearance.Large">
+       <item name="android:textSize">18dp</item>  
+       <item name="android:textColor">@color/dlg_txt_gray</item>  
+       
+   </style>
+   
+   
+   <style name="Text.Big" parent="@android:style/TextAppearance.Large">
+       <item name="android:textSize">30dp</item>  
+       <item name="android:textColor">@color/text_black</item>  
+       
+   </style>
+   
+    <style name="Text.Medium" parent="@android:style/TextAppearance.Medium">
+       <item name="android:textSize">18dp</item>  
+       <item name="android:textColor">@color/text_black</item>  
+       
+   </style>
+   <style name="Text.Small" parent="@android:style/TextAppearance.Small">
+       <item name="android:textSize">14dp</item>  
+       <item name="android:textColor">@color/text_black</item>  
+       
+   </style>
+    
+   <style name="Text.White.Big" parent="@android:style/TextAppearance.Large">
+       <item name="android:textSize">25dp</item>   
+       <item name="android:textColor" >@color/White</item>
+   </style>
+   <style name="Text.White.Medium" parent="@android:style/TextAppearance.Medium">
+       <item name="android:textSize">16dp</item>   
+       <item name="android:textColor" >@color/White</item>
+   </style>
+   
+   <style name="Text.White.Small" parent="@android:style/TextAppearance.Small">
+       <item name="android:textSize">12dp</item>   
+       <item name="android:textColor" >@color/White</item>
+   </style>
+   
+    <style name="Text.Gray.Small" parent="@android:style/TextAppearance.Small">
+       <item name="android:textSize">12dp</item>   
+       <item name="android:textColor" >@color/txt_gray</item>
+   </style>
+    <style name="Text.Gray" parent="@android:style/TextAppearance.Large">
+       <item name="android:textSize">16dp</item>   
+       <item name="android:textColor" >@color/txt_gray</item>
+   </style>
+   <style name="Text.Gray.Big" parent="@android:style/TextAppearance.Large">
+       <item name="android:textSize">22dp</item>   
+       <item name="android:textColor" >@color/txt_gray</item>
+   </style>
+   
+   <style name="PEditTextst" parent="@android:style/Widget.EditText">     
+       <!-- <item name="android:textColorHint" >@drawable/edtx_text_selector</item> -->
+       <!-- <item name="android:textColor">@drawable/edtx_text_selector</item> -->
+       <!-- <item name="android:background">@drawable/textbox_selector</item> -->
+       <item name="android:paddingRight">10dp</item>  
+      <!--  <item name="android:drawableRight">@drawable/cross_btn</item> -->
+       
+   </style>
+   
+   <style name="SettingEDTX" parent="@android:style/Widget.EditText">     
+       <!-- <item name="android:textColorHint" >@drawable/setting_edtx_text_selector</item> -->
+       <!-- <item name="android:textColor">@drawable/setting_edtx_text_selector</item> -->
+       
+   </style>
+   <!-- 
+   <style name="Setting_row" parent="@android:style/TextAppearance.Large">
+       <item name="android:textSize">16dp</item>   
+       <item name="android:background">@drawable/setting_row_selector</item>
+       <item name="android:clickable">true</item>
+       <item name="android:gravity">center_vertical</item>
+       <item name="android:paddingLeft">15dp</item>
+       <item name="android:textColor" >@drawable/setting_row_txt_selector</item>
+   </style>
+   
+   
+   <style name="Text.Setting.Usertext" parent="@android:style/TextAppearance.Large" >
+    
+    <item name="android:textColor">@color/setting_txt_gray</item>
+    <item name="android:textSize">20dip</item>
+    <item name="android:shadowColor">@color/Black</item>
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">1</item>
+    <item name="android:shadowRadius">1</item>
+  </style>
+  -->
 </resources>

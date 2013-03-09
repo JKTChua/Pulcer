@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Ulcer implements Serializable{
+public class UlcerEnt implements Serializable{
 
 	
 	/**

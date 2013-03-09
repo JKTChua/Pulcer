@@ -6,12 +6,12 @@ import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.getplusapp.mobile.android.entity.Reminder;
-import com.getplusapp.mobile.android.parser.SyncServerParser;
-import com.getplusapp.mobile.android.parser.SyncServerParser.DaySchedule;
-import com.getplusapp.mobile.android.util.PLogger;
-import com.getplusapp.mobile.android.web.HttpUtil;
-import com.getplusapp.mobile.android.web.RequestMethod;
+import com.me.pulcer.entity.Reminder;
+import com.me.pulcer.parser.SyncServerParser;
+import com.me.pulcer.parser.SyncServerParser.DaySchedule;
+import com.me.pulcer.util.PLogger;
+import com.me.pulcer.web.HttpUtil;
+import com.me.pulcer.web.RequestMethod;
 import com.google.gson.Gson;
 
 public class SyncTask extends TimerTask{

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <declare-styleable name="PProgressBar">
+       
+        <attr name="second_drawable" format="string" />
+    </declare-styleable>
+    
+    <declare-styleable name="PTextView">
+        <attr name="font_file" format="string" />
+    </declare-styleable>
+     
+     
+     
+</resources>

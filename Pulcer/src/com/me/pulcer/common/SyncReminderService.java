@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 
-import com.getplusapp.mobile.android.util.PLogger;
+import com.me.pulcer.util.PLogger;
 import com.the9tcat.hadi.DefaultDAO;
 
 public class SyncReminderService extends Service {

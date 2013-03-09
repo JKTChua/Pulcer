@@ -1,11 +1,11 @@
-package com.getplusapp.mobile.android.component;
+package com.me.pulcer.component;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.getplusapp.mobile.android.util.PLogger;
+import com.me.pulcer.util.PLogger;
 
 public class SelectionLayout extends LinearLayout{
 

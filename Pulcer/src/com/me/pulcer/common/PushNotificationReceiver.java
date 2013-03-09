@@ -8,8 +8,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.getplusapp.mobile.android.PushNotificaionDialog_;
-import com.getplusapp.mobile.android.util.PLogger;
+import com.me.pulcer..PushNotificaionDialog_;
+import com.me.pulcer..util.PLogger;
 import com.urbanairship.UAirship;
 import com.urbanairship.push.PushManager;
 

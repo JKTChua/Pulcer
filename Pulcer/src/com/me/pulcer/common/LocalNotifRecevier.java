@@ -10,8 +10,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.getplusapp.mobile.android.PushNotificaionDialog_;
-import com.getplusapp.mobile.android.R;
+import com.me.pulcer.PushNotificationDialogue;
+import com.example.pulcer.R;
 
 public class LocalNotifRecevier extends BroadcastReceiver {
 	

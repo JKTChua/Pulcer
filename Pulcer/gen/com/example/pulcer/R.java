@@ -13,6 +13,46 @@ public final class R {
         public static final int slide_out_left=0x7f040001;
     }
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int font_file=0x7f010001;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int second_drawable=0x7f010000;
+    }
+    public static final class color {
+        public static final int Black=0x7f070002;
+        public static final int Gray_Dark=0x7f070004;
+        public static final int Green=0x7f070000;
+        public static final int White=0x7f070001;
+        public static final int dlg_back=0x7f07000c;
+        public static final int dlg_bg_grey=0x7f070011;
+        public static final int dlg_txt_gray=0x7f070010;
+        public static final int ligth_black=0x7f070005;
+        public static final int list_disable_bg=0x7f070013;
+        public static final int list_upcomming_color=0x7f070012;
+        public static final int setting_txt_gray=0x7f070009;
+        public static final int tab_txt_active=0x7f07000b;
+        public static final int tab_txt_disable=0x7f07000a;
+        public static final int text_black=0x7f070003;
+        public static final int trans_1=0x7f07000e;
+        public static final int transparent=0x7f07000d;
+        public static final int txt_black=0x7f070008;
+        public static final int txt_gray=0x7f070006;
+        /**  a6a6a6 
+         */
+        public static final int txt_green=0x7f070007;
+        public static final int user_list_bg=0x7f07000f;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -25,38 +65,48 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int capsule=0x7f020000;
+        public static final int grey_square=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int toggle_btn_selector=0x7f020003;
+        public static final int toggle_off=0x7f020004;
+        public static final int toggle_on=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f09001c;
-        public static final int btnAccept=0x7f090019;
-        public static final int btnAddDate=0x7f090014;
-        public static final int btnAddUlcer=0x7f090001;
-        public static final int btnBack=0x7f090009;
-        public static final int btnDecline=0x7f090018;
-        public static final int btnFemale=0x7f090010;
-        public static final int btnLogin=0x7f090005;
-        public static final int btnMale=0x7f09000f;
-        public static final int btnRegister=0x7f090008;
-        public static final int btnSettings=0x7f090000;
-        public static final int btnUlcerBack=0x7f090011;
-        public static final int dateDob=0x7f09000e;
-        public static final int edit_message=0x7f090015;
-        public static final int gallery1=0x7f090017;
-        public static final int lblAgreement=0x7f090012;
-        public static final int lblStage=0x7f090016;
-        public static final int lvUlcers=0x7f090004;
-        public static final int menu_settings=0x7f09001b;
-        public static final int textView2=0x7f090013;
-        public static final int tvRiskAssessment=0x7f090002;
-        public static final int tvRiskResult=0x7f090003;
-        public static final int txtAgreement=0x7f09001a;
-        public static final int txtEmail=0x7f090006;
-        public static final int txtName=0x7f09000a;
-        public static final int txtPassword=0x7f090007;
-        public static final int txtRegisterEmail=0x7f09000b;
-        public static final int txtRegisterPassword=0x7f09000c;
-        public static final int txtRegisterPasswordConfirm=0x7f09000d;
+        public static final int LinearLayout1=0x7f0a001b;
+        public static final int RelativeLayout1=0x7f0a001f;
+        public static final int action_settings=0x7f0a0021;
+        public static final int btnAccept=0x7f0a0019;
+        public static final int btnAddDate=0x7f0a0014;
+        public static final int btnAddUlcer=0x7f0a0001;
+        public static final int btnBack=0x7f0a0009;
+        public static final int btnDecline=0x7f0a0018;
+        public static final int btnFemale=0x7f0a0010;
+        public static final int btnLogin=0x7f0a0005;
+        public static final int btnMale=0x7f0a000f;
+        public static final int btnRegister=0x7f0a0008;
+        public static final int btnSettings=0x7f0a0000;
+        public static final int btnUlcerBack=0x7f0a0011;
+        public static final int dateDob=0x7f0a000e;
+        public static final int edit_message=0x7f0a0015;
+        public static final int gallery1=0x7f0a0017;
+        public static final int lblAgreement=0x7f0a0012;
+        public static final int lblStage=0x7f0a0016;
+        public static final int lvUlcers=0x7f0a0004;
+        public static final int menu_settings=0x7f0a0020;
+        public static final int pill_content=0x7f0a001e;
+        public static final int pill_imgvw=0x7f0a001c;
+        public static final int pill_name=0x7f0a001d;
+        public static final int textView2=0x7f0a0013;
+        public static final int tvRiskAssessment=0x7f0a0002;
+        public static final int tvRiskResult=0x7f0a0003;
+        public static final int txtAgreement=0x7f0a001a;
+        public static final int txtEmail=0x7f0a0006;
+        public static final int txtName=0x7f0a000a;
+        public static final int txtPassword=0x7f0a0007;
+        public static final int txtRegisterEmail=0x7f0a000b;
+        public static final int txtRegisterPassword=0x7f0a000c;
+        public static final int txtRegisterPasswordConfirm=0x7f0a000d;
     }
     public static final class layout {
         public static final int activity_dashboard=0x7f030000;
@@ -67,18 +117,19 @@ public final class R {
         public static final int activity_settings=0x7f030005;
         public static final int activity_ulcer=0x7f030006;
         public static final int activity_useragreement=0x7f030007;
+        public static final int ulcer_row=0x7f030008;
     }
     public static final class menu {
-        public static final int activity_launcher=0x7f080000;
-        public static final int activity_settings=0x7f080001;
-        public static final int dashboard=0x7f080002;
-        public static final int login=0x7f080003;
-        public static final int main=0x7f080004;
-        public static final int register=0x7f080005;
-        public static final int searchmed=0x7f080006;
-        public static final int ulcer=0x7f080007;
-        public static final int user_list=0x7f080008;
-        public static final int useragreement=0x7f080009;
+        public static final int activity_launcher=0x7f090000;
+        public static final int activity_settings=0x7f090001;
+        public static final int dashboard=0x7f090002;
+        public static final int login=0x7f090003;
+        public static final int main=0x7f090004;
+        public static final int register=0x7f090005;
+        public static final int searchmed=0x7f090006;
+        public static final int ulcer=0x7f090007;
+        public static final int user_list=0x7f090008;
+        public static final int useragreement=0x7f090009;
     }
     public static final class string {
         public static final int accept=0x7f060020;
@@ -119,6 +170,28 @@ public final class R {
         public static final int validate_search_pill=0x7f06001b;
     }
     public static final class style {
+        /**  
+    <style name="PButton.Green" parent="android:style/Widget.Button">
+    	<item name="android:textSize">18dip</item>
+    	<item name="android:background">@drawable/green_btn_selector</item>
+    	<item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="PButton.White" parent="android:style/Widget.Button">
+        <item name="android:textSize">18dip</item>
+    	<item name="android:background">@drawable/white_btn_selector</item>
+    	<item name="android:textColor">@color/text_black</item>
+    	
+    </style>
+     
+         */
+        public static final int AddPill_Text_Large=0x7f08000b;
+        public static final int AddPill_Text_Medium=0x7f08000d;
+        public static final int AddPill_Text_Small=0x7f08000c;
+        /**  <item name="android:windowAnimationStyle">@style/SlideDialog</item> 
+ <item name="android:checkboxStyle">@style/PCheckBox</item> 
+         */
+        public static final int AddPillDialog=0x7f080006;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -129,10 +202,110 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f080001;
+        /**   <item name="android:drawableRight">@drawable/cross_btn</item> 
+         */
+        public static final int PEditTextst=0x7f080017;
+        /**  
+    <style name="SlideDialog">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+    
+    <style name="ListPopup">
+        <item name="android:windowEnterAnimation">@anim/pop_slide_out</item>
+        <item name="android:windowExitAnimation">@anim/pop_slide_in</item>
+    </style>
+     
+         */
+        public static final int PLabel_Big=0x7f080007;
+        public static final int PLabel_Big_Gray=0x7f080008;
+        public static final int PLabel_medium=0x7f08000a;
+        public static final int PLabel_small_Gray=0x7f080009;
+        /**  
+    <style name="PCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+      <item name="android:button">@drawable/chk_box_selector</item>  
+    </style>
+     
+         */
+        public static final int PToggle=0x7f080005;
+        /**  <item name="android:checkboxStyle">@style/PCheckBox</item> 
+         */
+        public static final int PlusDialog=0x7f080004;
+        /**  <item name="android:textColorHint" >@drawable/setting_edtx_text_selector</item> 
+ <item name="android:textColor">@drawable/setting_edtx_text_selector</item> 
+         */
+        public static final int SettingEDTX=0x7f080018;
+        public static final int Text_Big=0x7f08000e;
+        public static final int Text_Gray=0x7f080015;
+        public static final int Text_Gray_Big=0x7f080016;
+        public static final int Text_Gray_Small=0x7f080014;
+        public static final int Text_Medium=0x7f08000f;
+        public static final int Text_Small=0x7f080010;
+        public static final int Text_White_Big=0x7f080011;
+        public static final int Text_White_Medium=0x7f080012;
+        public static final int Text_White_Small=0x7f080013;
+        public static final int dark_bold_header=0x7f080003;
+        public static final int dark_header_base=0x7f080002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a PProgressBar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #PProgressBar_second_drawable com.example.pulcer:second_drawable}</code></td><td></td></tr>
+           </table>
+           @see #PProgressBar_second_drawable
+         */
+        public static final int[] PProgressBar = {
+            0x7f010000
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#second_drawable}
+          attribute's value can be found in the {@link #PProgressBar} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:second_drawable
+        */
+        public static final int PProgressBar_second_drawable = 0;
+        /** Attributes that can be used with a PTextView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #PTextView_font_file com.example.pulcer:font_file}</code></td><td></td></tr>
+           </table>
+           @see #PTextView_font_file
+         */
+        public static final int[] PTextView = {
+            0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#font_file}
+          attribute's value can be found in the {@link #PTextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:font_file
+        */
+        public static final int PTextView_font_file = 0;
+    };
 }
