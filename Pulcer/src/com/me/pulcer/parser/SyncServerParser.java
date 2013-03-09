@@ -2,7 +2,7 @@ package com.me.pulcer.parser;
 
 import java.util.ArrayList;
 
-import com.getplusapp.mobile.android.entity.Reminder;
+import com.me.pulcer.entity.Reminder;
 import com.google.gson.annotations.SerializedName;
 
 public class SyncServerParser extends Response {

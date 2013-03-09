@@ -14,11 +14,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 
-import com.getplusapp.mobile.android.R;
-import com.getplusapp.mobile.android.component.PButton;
-import com.getplusapp.mobile.android.component.PTextView;
-import com.getplusapp.mobile.android.component.SlideMenu;
-import com.getplusapp.mobile.android.util.PLogger;
+import com.example.pulcer.R;
+import com.me.pulcer.component.PButton;
+import com.me.pulcer.component.PTextView;
+import com.me.pulcer.component.SlideMenu;
+import com.me.pulcer.util.PLogger;
 
 
 

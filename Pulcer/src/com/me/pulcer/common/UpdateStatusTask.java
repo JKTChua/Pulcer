@@ -11,10 +11,10 @@ import org.json.JSONObject;
 
 import android.content.Context;
 
-import com.getplusapp.mobile.android.entity.UpdateStatus;
-import com.getplusapp.mobile.android.util.PLogger;
-import com.getplusapp.mobile.android.util.Util;
-import com.getplusapp.mobile.android.web.HttpUtil;
+import com.me.pulcer.entity.UpdateStatus;
+import com.me.pulcer.util.PLogger;
+import com.me.pulcer.util.Util;
+import com.me.pulcer.web.HttpUtil;
 import com.google.gson.Gson;
 import com.the9tcat.hadi.DefaultDAO;
 

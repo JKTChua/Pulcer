@@ -13,12 +13,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 
-import com.getplusapp.mobile.android.entity.Reminder;
-import com.getplusapp.mobile.android.entity.Transection;
-import com.getplusapp.mobile.android.entity.UserDetail;
-import com.getplusapp.mobile.android.parser.UserDetailParser;
-import com.getplusapp.mobile.android.util.PLogger;
-import com.getplusapp.mobile.android.util.Util;
+import com.me.pulcer.entity.Reminder;
+import com.me.pulcer.entity.Transaction;
+import com.me.pulcer.entity.UserDetail;
+import com.me.pulcer.parser.UserDetailParser;
+import com.me.pulcer.util.PLogger;
+import com.me.pulcer.util.Util;
 import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 import com.the9tcat.hadi.DefaultDAO;
 

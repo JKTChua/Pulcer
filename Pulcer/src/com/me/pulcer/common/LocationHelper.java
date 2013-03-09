@@ -7,7 +7,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 
-import com.getplusapp.mobile.android.util.PLogger;
+import com.me.pulcer.util.PLogger;
 
 public class LocationHelper
 {

@@ -1,4 +1,4 @@
-package com.getplusapp.mobile.android.component;
+package com.me.pulcer.component;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,10 +16,10 @@ import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.ViewAnimator;
 
-import com.getplusapp.mobile.android.PillList_;
-import com.getplusapp.mobile.android.R;
-import com.getplusapp.mobile.android.UserHome;
-import com.getplusapp.mobile.android.UserList_;
+import com.me.pulcer.PillList_;
+import com.me.pulcer.R;
+import com.me.pulcer.UserHome;
+import com.me.pulcer.UserList_;
 
 public class SlideMenu{
 

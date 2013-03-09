@@ -1,5 +1,7 @@
-package com.getplusapp.mobile.android.component;
+package com.me.pulcer.component;
 
+
+import com.example.pulcer.R;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -7,8 +9,6 @@ import android.util.DisplayMetrics;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.getplusapp.mobile.android.R;
 
 public class PProgressBar extends RelativeLayout {
 

@@ -1,6 +1,6 @@
 package com.me.pulcer.parser;
 
-import com.getplusapp.mobile.android.entity.Reminder;
+import com.me.pulcer.entity.Reminder;
 import com.google.gson.annotations.SerializedName;
 
 public class DuplicatePillParser extends Response {

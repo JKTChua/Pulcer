@@ -1,7 +1,5 @@
 package com.me.pulcer.common;
 
-
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -25,8 +23,8 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.getplusapp.mobile.android.R;
-import com.getplusapp.mobile.android.util.PLogger;
+import com.example.pulcer.R;
+import com.me.pulcer.util.PLogger;
 
 public class CameraManager {
 	

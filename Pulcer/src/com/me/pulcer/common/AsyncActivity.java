@@ -24,20 +24,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import android.component.PButton;
-import android.component.PTextView;
-import android.component.SlideMenu;
-import android.entity.Reminder;
-import android.entity.Test;
-import android.parser.ReminderStatusParser;
-import android.parser.Response;
-import android.util.PLogger;
-import android.util.Util;
-import android.web.AsyncCall;
-import android.web.AsyncCallListener;
-import android.web.RequestMethod;
+import com.me.pulcer.component.PButton;
+import com.me.pulcer.component.PTextView;
+import com.me.pulcer.component.SlideMenu;
+import com.me.pulcer.entity.Reminder;
+import com.me.pulcer.entity.Test;
+import com.me.pulcer.parser.ReminderStatusParser;
+import com.me.pulcer.parser.Response;
+import com.me.pulcer.util.PLogger;
+import com.me.pulcer.util.Util;
+import com.me.pulcer.web.AsyncCall;
+import com.me.pulcer.web.AsyncCallListener;
+import com.me.pulcer.web.RequestMethod;
+import com.example.pulcer.R;
 import com.google.gson.Gson;
-import com.me.pulcer.R;
 import com.the9tcat.hadi.DefaultDAO;
 
 public abstract class AsyncActivity extends Activity

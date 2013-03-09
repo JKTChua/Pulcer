@@ -8,13 +8,13 @@ import org.apache.http.message.BasicNameValuePair;
 
 import android.content.Context;
 
-import com.getplusapp.mobile.android.entity.Reminder;
-import com.getplusapp.mobile.android.entity.UserDetail;
-import com.getplusapp.mobile.android.parser.GetAllDetailParser;
-import com.getplusapp.mobile.android.util.PLogger;
-import com.getplusapp.mobile.android.util.Util;
-import com.getplusapp.mobile.android.web.HttpUtil;
-import com.getplusapp.mobile.android.web.RequestMethod;
+import com.me.pulcer.entity.Reminder;
+import com.me.pulcer.entity.UserDetail;
+import com.me.pulcer.parser.GetAllDetailParser;
+import com.me.pulcer.util.PLogger;
+import com.me.pulcer.util.Util;
+import com.me.pulcer.web.HttpUtil;
+import com.me.pulcer.web.RequestMethod;
 import com.google.gson.Gson;
 import com.the9tcat.hadi.DefaultDAO;
 

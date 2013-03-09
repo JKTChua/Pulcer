@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <LinearLayout android:id="@+id/LinearLayout1" android:layout_width="match_parent"
+      android:layout_height="wrap_content" 
+      android:gravity="center_vertical" 
+      android:minHeight="70dp" 
+      xmlns:app="http://schemas.android.com/apk/res/com.example.pulcer"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/pill_imgvw" android:layout_width="fill_parent" android:layout_height="match_parent" android:layout_weight="0.80" android:scaleType="center" android:src="@drawable/capsule"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.45" android:orientation="vertical">
+        <com.me.pulcer.component.PTextView
+            app:font_file="FS Joey-Medium.otf"
+            android:id="@+id/pill_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PTextView" android:textAppearance="@style/PLabel.Big"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp">
+            <com.me.pulcer.component.PTextView 
+                app:font_file="FS Joey-Medium.otf"
+                android:id="@+id/pill_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.65" android:text="100mg" android:textAppearance="@style/PLabel.medium"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/RelativeLayout1" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+    </RelativeLayout>
+    
+</LinearLayout>
+   

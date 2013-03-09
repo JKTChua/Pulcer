@@ -37,5 +37,26 @@
     <string name="decline">Decline</string>
     <string name="user_agreement">User Agreement</string>
     <string name="riskassessment">Risk Assessment</string>
+    
+	<color name="Green">#b0c32f</color>
+	<color name="White">#FFFFFF</color>
+	<color name="Black">#000000</color>
+	<color name="text_black">#555555</color>
+	<color name="Gray_Dark">#707070</color>
+	<color name="ligth_black">#363636</color>
+	<color name="txt_gray">#898989</color><!-- a6a6a6 -->
+	<color name="txt_green">#869544</color>
+	<color name="txt_black">#555555</color>
+	<color name="setting_txt_gray">#e4e4e4</color>
+	<color name="tab_txt_disable">#848484</color>
+	<color name="tab_txt_active">#555555</color>
+	<color name="dlg_back">#ebebeb</color>
+	<color name="transparent">#00000000</color>
+	<color name="trans_1">#00000000</color>
+	<color name="user_list_bg">#ebebeb</color>
+	<color name="dlg_txt_gray">#959595</color>
+	<color name="dlg_bg_grey">#ebebeb</color>  
+	<color name="list_upcomming_color">#eaf9fc</color>
+	<color name="list_disable_bg">#f2f2f2</color>
 
 </resources>
