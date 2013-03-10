@@ -1,7 +1,7 @@
-package com.getplusapp.mobile.android.component;
+package com.me.pulcer.component;
 
 
-import com.getplusapp.mobile.android.R;
+import com.example.pulcer.R;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -82,7 +82,7 @@ public class MyTabBar extends LinearLayout{
 	}
 	
 	public void setBadge(String message,int tab){
-		((PTextView)this.getChildAt(tab).findViewById(R.id.badge_txvw)).setText(message);
+//		((PTextView)this.getChildAt(tab).findViewById(R.id.badge_txvw)).setText(message);
 		
 	}
 	

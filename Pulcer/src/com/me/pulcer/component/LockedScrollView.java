@@ -1,4 +1,4 @@
-package com.getplusapp.mobile.android.component;
+package com.me.pulcer.component;
 
 import android.content.Context;
 import android.util.AttributeSet;

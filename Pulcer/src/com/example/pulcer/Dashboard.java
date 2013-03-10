@@ -26,13 +26,14 @@ import android.database.Cursor;
 
 import com.me.pulcer.adapter.UlcerAdapter;
 import com.me.pulcer.entity.UlcerEnt;
+import com.me.pulcer.entity.UlcerGroup;
 
 public class Dashboard extends Activity
 {
 	ListView ulcer_list;
 	
 	UlcerAdapter adapter;
-	ArrayList <UlcerEnt> listData=new ArrayList<UlcerEnt>();
+	ArrayList <UlcerGroup> listData=new ArrayList<UlcerGroup>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -57,7 +58,7 @@ public class Dashboard extends Activity
 		{
 			if(adapter.getItem(position)!=null)
 			{
-				UlcerEnt ulcer = adapter.getItem(position);
+				UlcerGroup ulcer = adapter.getItem(position);
 				Intent intent = new Intent(Dashboard.this, Ulcer.class);
 				
 //				intent.putExtra("MODE", AddReminder.MODE_ADD);
@@ -74,7 +75,7 @@ public class Dashboard extends Activity
 		DefaultDAO dao = new DefaultDAO(this);
 		String args[]={""+0};
 		try{
-			listData = (ArrayList<UlcerEnt>) dao.select(UlcerEnt.class, false, "id>", args, null, null, null, null);
+			listData = (ArrayList<UlcerGroup>) dao.select(UlcerEnt.class, false, "id>", args, null, null, null, null);
 			adapter = new UlcerAdapter(this, listData);
 			
 		}catch(Exception e){

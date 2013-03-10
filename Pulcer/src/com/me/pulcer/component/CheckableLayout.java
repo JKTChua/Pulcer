@@ -1,4 +1,4 @@
-package com.getplusapp.mobile.android.component;
+package com.me.pulcer.component;
 
 /**
  * Created by IntelliJ IDEA.

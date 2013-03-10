@@ -1,4 +1,4 @@
-package com.getplusapp.mobile.android.component;
+package com.me.pulcer.component;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.EditText;
 
-import com.getplusapp.mobile.android.component.PEditText.DrawableClickListener.DrawablePosition;
+import com.me.pulcer.component.PEditText.DrawableClickListener.DrawablePosition;
 
 public class PEditText extends EditText {
 	
