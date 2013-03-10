@@ -21,7 +21,8 @@ import com.me.pulcer.util.PLogger;
 import com.me.pulcer.util.Util;
 import com.me.pulcer.entity.UlcerEnt;
 
-public class UlcerAdapter extends BaseAdapter{
+public class UlcerAdapter extends BaseAdapter
+{
 
 	public ArrayList<UlcerEnt> list;
 	private LayoutInflater lf;
@@ -29,17 +30,15 @@ public class UlcerAdapter extends BaseAdapter{
 	public int selectedId=-1;
 	Context context;
 	
-	static class ViewHolder {
-        PTextView pillName,pillTime;
-        ImageView pillImg;
-        PTextView pillContent,pillSchedule;
-        LinearLayout dayContainer;
-        TextView rowIndicator;
-        
-        
+	static class ViewHolder
+	{
+        PTextView ulcerStage;
+        ImageView ulcerImg;
+        PTextView ulcerLocation;
     }
 	
-	public UlcerAdapter(Context context,ArrayList<UlcerEnt> ulcerList){
+	public UlcerAdapter(Context context,ArrayList<UlcerEnt> ulcerList)
+	{
 		this.list = ulcerList;
 		this.context = context;
 		lf=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -47,38 +46,49 @@ public class UlcerAdapter extends BaseAdapter{
 	
 	
 	@Override
-	public int getCount() {
+	public int getCount()
+	{
 		return list.size();
 	}
 
 	@Override
-	public UlcerEnt getItem(int index) {
+	public UlcerEnt getItem(int index)
+	{
 		return list.get(index);
 	}
 
 	@Override
-	public long getItemId(int arg0) {
+	public long getItemId(int arg0)
+	{
 		return 0;
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(int position, View convertView, ViewGroup parent)
+	{
 		ViewHolder holder;
 //		PLogger.getLogger().info("getView Called:"+position+" locked:"+isLocked);
 		
-		if(convertView==null){
+		if(convertView==null)
+		{
 			convertView=lf.inflate(R.layout.ulcer_row, null);
 			holder = new ViewHolder();
-			holder.pillImg=(ImageView) convertView.findViewById(R.id.pill_imgvw);
-			holder.pillName=(PTextView) convertView.findViewById(R.id.pill_name);
-			holder.pillContent=(PTextView) convertView.findViewById(R.id.pill_content);
-//			holder.pillTimeSub=(PTextView) convertView.findViewById(R.id.pill_time_sub);
+			holder.ulcerImg=(ImageView) convertView.findViewById(R.id.ulcer_imgvw);
+			holder.ulcerStage=(PTextView) convertView.findViewById(R.id.ulcer_stage);
+			holder.ulcerLocation=(PTextView) convertView.findViewById(R.id.ulcer_location);
 			convertView.setTag(holder);
-		}else{
+		}
+		else
+		{
 			holder = (ViewHolder) convertView.getTag();
 		}
 		
 		UlcerEnt ulcer = (UlcerEnt) list.get(position);
+		
+		if(ulcer!=null)
+		{
+			holder.ulcerStage.setText("Stage " + ulcer.stage);
+		}
 		
 //		if(ulcer!=null){
 //			infoLog("Name:"+ulcer.medication+" status:"+ulcer.status);
