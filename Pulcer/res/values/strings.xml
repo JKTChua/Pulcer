@@ -37,6 +37,7 @@
     <string name="decline">Decline</string>
     <string name="user_agreement">User Agreement</string>
     <string name="riskassessment">Risk Assessment</string>
+    <string name="register_now">New? Click to register</string>
     
 	<string name="dlg_from_camera">Capture Image</string>
 	<string name="dlg_cancel">Cancel</string>
