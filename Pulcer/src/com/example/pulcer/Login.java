@@ -17,6 +17,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -114,7 +115,7 @@ public class Login extends Activity
 		dialog.show();
 	}
 	
-	protected void login()
+	public void login(View v)
 	{	
 		asyncCall=new AsyncCall(this);
 		asyncCall.webMethod=RequestMethod.POST;
@@ -122,6 +123,7 @@ public class Login extends Activity
 		asyncCall.setMessage("Authenticating please wait...");
 		asyncCall.addParam("email", mEmail.getText().toString());
 		asyncCall.addParam("password", mPassword.getText().toString());
+		asyncCall.addParam("device_token", "00");
 		asyncCall.setAsyncCallListener(new AsyncCallListener()
 		{
 			@Override
@@ -160,6 +162,12 @@ public class Login extends Activity
 			}
 		});
 		asyncCall.execute();
+	}
+	
+	public void register(View v)
+	{
+		startActivity(new Intent(Login.this, Register.class));
+		finish();
 	}
 
 }

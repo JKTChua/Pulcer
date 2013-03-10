@@ -133,7 +133,7 @@ public class Register extends Activity {
 		}
 	};
 
-	protected void register()
+	public void register(View v)
 	{
 		boolean isMale = mMale.isPressed();
 		int month = mDate.getMonth();
@@ -228,5 +228,11 @@ public class Register extends Activity {
 			}
 		}
 		return true;
+	}
+	
+	public void login(View v)
+	{
+		startActivity(new Intent(Register.this, Login.class));
+		finish();
 	}
 }

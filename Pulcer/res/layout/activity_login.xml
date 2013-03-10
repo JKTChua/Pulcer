@@ -36,4 +36,15 @@
         android:ems="10"
         android:inputType="textPassword" />
 
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPassword"
+        android:layout_below="@+id/txtPassword"
+        android:clickable="true"
+        android:onClick="register"
+        android:text="@string/register_now"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 </RelativeLayout>
