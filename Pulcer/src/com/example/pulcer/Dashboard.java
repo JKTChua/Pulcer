@@ -39,6 +39,7 @@ public class Dashboard extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_launcher);
+		loadFromDb();
 	}
 
 	@Override
@@ -49,11 +50,13 @@ public class Dashboard extends Activity
 		return true;
 	}
     
-	AdapterView.OnItemClickListener listClick=new OnItemClickListener() {
-
+	AdapterView.OnItemClickListener listClick=new OnItemClickListener()
+	{
 		@Override
-		public void onItemClick(AdapterView<?> arg0, View view, int position,long arg3) {
-			if(adapter.getItem(position)!=null){
+		public void onItemClick(AdapterView<?> arg0, View view, int position,long arg3)
+		{
+			if(adapter.getItem(position)!=null)
+			{
 				UlcerEnt ulcer = adapter.getItem(position);
 				Intent intent = new Intent(Dashboard.this, Ulcer.class);
 				
@@ -65,4 +68,17 @@ public class Dashboard extends Activity
 			}
 		}
 	};
+	
+	protected void loadFromDb()
+	{
+		DefaultDAO dao = new DefaultDAO(this);
+		String args[]={""+0};
+		try{
+			listData = (ArrayList<UlcerEnt>) dao.select(UlcerEnt.class, false, "id>", args, null, null, null, null);
+			adapter = new UlcerAdapter(this, listData);
+			
+		}catch(Exception e){
+			//infoLog("Error while retriving data from db:"+e);
+		}
+	}
 }

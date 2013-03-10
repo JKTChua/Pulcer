@@ -94,9 +94,6 @@ containing a value of this type.
         public static final int lblStage=0x7f0a0016;
         public static final int lvUlcers=0x7f0a0004;
         public static final int menu_settings=0x7f0a0020;
-        public static final int pill_content=0x7f0a001e;
-        public static final int pill_imgvw=0x7f0a001c;
-        public static final int pill_name=0x7f0a001d;
         public static final int textView2=0x7f0a0013;
         public static final int tvRiskAssessment=0x7f0a0002;
         public static final int tvRiskResult=0x7f0a0003;
@@ -107,6 +104,9 @@ containing a value of this type.
         public static final int txtRegisterEmail=0x7f0a000b;
         public static final int txtRegisterPassword=0x7f0a000c;
         public static final int txtRegisterPasswordConfirm=0x7f0a000d;
+        public static final int ulcer_imgvw=0x7f0a001c;
+        public static final int ulcer_location=0x7f0a001d;
+        public static final int ulcer_stage=0x7f0a001e;
     }
     public static final class layout {
         public static final int activity_dashboard=0x7f030000;
