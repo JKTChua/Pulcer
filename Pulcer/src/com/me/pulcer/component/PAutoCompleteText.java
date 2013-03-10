@@ -1,4 +1,4 @@
-package com.getplusapp.mobile.android.component;
+package com.me.pulcer.component;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.AutoCompleteTextView;
 
-import com.getplusapp.mobile.android.component.PAutoCompleteText.DrawableClickListener.DrawablePosition;
+import com.me.pulcer.component.PAutoCompleteText.DrawableClickListener.DrawablePosition;
 
 public class PAutoCompleteText extends AutoCompleteTextView {
 

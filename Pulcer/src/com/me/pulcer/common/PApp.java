@@ -5,15 +5,10 @@ import android.location.Location;
 import android.os.Environment;
 
 import com.example.pulcer.R;
-import com.me.pulcer.adapter.FamilyAdapter;
 import com.me.pulcer.common.LocationHelper.LocationResult;
 import com.me.pulcer.util.ImageLoader;
 import com.me.pulcer.util.Util;
 import com.the9tcat.hadi.HadiApplication;
-import com.urbanairship.AirshipConfigOptions;
-import com.urbanairship.UAirship;
-import com.urbanairship.push.CustomPushNotificationBuilder;
-import com.urbanairship.push.PushManager;
 
 
 public class PApp extends HadiApplication {
@@ -69,48 +64,22 @@ public class PApp extends HadiApplication {
 	
 	public ImageLoader imageLoader;
 	
-//	public ArrayList<UserDetail> familyUserlist;
-	//TODO this is used in UserHomeV2 Implementation
-	//Remove if not using UserHomeV2
-	public FamilyAdapter familyAdapter;
 	public boolean isRefresUserData=true;
 //	public UserDetail currentUser;
 	
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		AirshipConfigOptions options = AirshipConfigOptions.loadDefaultOptions(this);
-        UAirship.takeOff(this, options);
-        PushManager.enablePush();
-        CustomPushNotificationBuilder nb = new CustomPushNotificationBuilder();
-        nb.statusBarIconDrawableId = R.drawable.plus_icon;//custom status bar icon
-        nb.layout = R.layout.notification;
-        nb.layoutIconDrawableId = R.drawable.plus_icon;//custom layout icon
-        nb.layoutIconId = R.id.icon;
-        nb.layoutSubjectId = R.id.subject;
-        nb.layoutMessageId = R.id.message;
-        PushManager.shared().setNotificationBuilder(nb);
-        PushManager.shared().setIntentReceiver(PushNotificationReceiver.class);
+//        nb.statusBarIconDrawableId = R.drawable.plus_icon;//custom status bar icon
+//        nb.layout = R.layout.notification;
+//        nb.layoutIconDrawableId = R.drawable.plus_icon;//custom layout icon
+//        nb.layoutIconId = R.id.icon;
+//        nb.layoutSubjectId = R.id.subject;
+//        nb.layoutMessageId = R.id.message;
         locationHelper=new LocationHelper();
         imageLoader = new ImageLoader(getApplicationContext());
         
         Util.createRequireDirectory();
-	}
-	
-	public void startSyncService(){
-		this.startService(new Intent(this, SyncReminderService.class));
-	}
-	
-	//TODO Need to call this on logout/application gets close
-	public void stopSyncService(){
-		this.stopService(new Intent(this, SyncReminderService.class));
-	}
-	
-	public void startChkNotifService(){
-		this.startService(new Intent(this, ChkLocalNotifService.class));
-	}
-	public void stopChkNotifService(){
-		this.stopService(new Intent(this, ChkLocalNotifService.class));
 	}
 	
 	public Location getLocation(){

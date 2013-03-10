@@ -38,6 +38,10 @@
     <string name="user_agreement">User Agreement</string>
     <string name="riskassessment">Risk Assessment</string>
     
+	<string name="dlg_from_camera">Capture Image</string>
+	<string name="dlg_cancel">Cancel</string>
+	<string name="dlg_from_gallery">Select from Gallery</string>
+    
 	<color name="Green">#b0c32f</color>
 	<color name="White">#FFFFFF</color>
 	<color name="Black">#000000</color>

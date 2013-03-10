@@ -17,14 +17,14 @@ import com.example.pulcer.R;
 import com.me.pulcer.common.PApp;
 import com.me.pulcer.component.PTextView;
 import com.me.pulcer.entity.Reminder;
+import com.me.pulcer.entity.UlcerGroup;
 import com.me.pulcer.util.PLogger;
 import com.me.pulcer.util.Util;
-import com.me.pulcer.entity.UlcerEnt;
 
 public class UlcerAdapter extends BaseAdapter
 {
 
-	public ArrayList<UlcerEnt> list;
+	public ArrayList<UlcerGroup> list;
 	private LayoutInflater lf;
 	public boolean isLocked=false;
 	public int selectedId=-1;
@@ -37,7 +37,7 @@ public class UlcerAdapter extends BaseAdapter
         PTextView ulcerLocation;
     }
 	
-	public UlcerAdapter(Context context,ArrayList<UlcerEnt> ulcerList)
+	public UlcerAdapter(Context context,ArrayList<UlcerGroup> ulcerList)
 	{
 		this.list = ulcerList;
 		this.context = context;
@@ -52,7 +52,7 @@ public class UlcerAdapter extends BaseAdapter
 	}
 
 	@Override
-	public UlcerEnt getItem(int index)
+	public UlcerGroup getItem(int index)
 	{
 		return list.get(index);
 	}
@@ -83,7 +83,7 @@ public class UlcerAdapter extends BaseAdapter
 			holder = (ViewHolder) convertView.getTag();
 		}
 		
-		UlcerEnt ulcer = (UlcerEnt) list.get(position);
+		UlcerGroup ulcer = (UlcerGroup) list.get(position);
 		
 		if(ulcer!=null)
 		{

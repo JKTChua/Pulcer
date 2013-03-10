@@ -65,17 +65,25 @@ containing a value of this type.
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int capsule=0x7f020000;
-        public static final int grey_square=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int toggle_btn_selector=0x7f020003;
-        public static final int toggle_off=0x7f020004;
-        public static final int toggle_on=0x7f020005;
+        public static final int avatar_circle=0x7f020000;
+        public static final int capsule=0x7f020001;
+        public static final int green_btn=0x7f020002;
+        public static final int green_btn_pressed=0x7f020003;
+        public static final int green_btn_selector=0x7f020004;
+        public static final int grey_square=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int notification_popup_bg=0x7f020007;
+        public static final int toggle_btn_selector=0x7f020008;
+        public static final int toggle_off=0x7f020009;
+        public static final int toggle_on=0x7f02000a;
+        public static final int white_btn=0x7f02000b;
+        public static final int white_btn_pressed=0x7f02000c;
+        public static final int white_btn_selector=0x7f02000d;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0a001b;
-        public static final int RelativeLayout1=0x7f0a001f;
-        public static final int action_settings=0x7f0a0021;
+        public static final int LinearLayout1=0x7f0a001e;
+        public static final int RelativeLayout1=0x7f0a0022;
+        public static final int action_settings=0x7f0a0024;
         public static final int btnAccept=0x7f0a0019;
         public static final int btnAddDate=0x7f0a0014;
         public static final int btnAddUlcer=0x7f0a0001;
@@ -88,12 +96,15 @@ containing a value of this type.
         public static final int btnSettings=0x7f0a0000;
         public static final int btnUlcerBack=0x7f0a0011;
         public static final int dateDob=0x7f0a000e;
+        public static final int dlg_cancel=0x7f0a001d;
         public static final int edit_message=0x7f0a0015;
+        public static final int from_cam_btn=0x7f0a001c;
+        public static final int from_gallery_btn=0x7f0a001b;
         public static final int gallery1=0x7f0a0017;
         public static final int lblAgreement=0x7f0a0012;
         public static final int lblStage=0x7f0a0016;
         public static final int lvUlcers=0x7f0a0004;
-        public static final int menu_settings=0x7f0a0020;
+        public static final int menu_settings=0x7f0a0023;
         public static final int textView2=0x7f0a0013;
         public static final int tvRiskAssessment=0x7f0a0002;
         public static final int tvRiskResult=0x7f0a0003;
@@ -104,9 +115,9 @@ containing a value of this type.
         public static final int txtRegisterEmail=0x7f0a000b;
         public static final int txtRegisterPassword=0x7f0a000c;
         public static final int txtRegisterPasswordConfirm=0x7f0a000d;
-        public static final int ulcer_imgvw=0x7f0a001c;
-        public static final int ulcer_location=0x7f0a001d;
-        public static final int ulcer_stage=0x7f0a001e;
+        public static final int ulcer_imgvw=0x7f0a001f;
+        public static final int ulcer_location=0x7f0a0020;
+        public static final int ulcer_stage=0x7f0a0021;
     }
     public static final class layout {
         public static final int activity_dashboard=0x7f030000;
@@ -117,7 +128,8 @@ containing a value of this type.
         public static final int activity_settings=0x7f030005;
         public static final int activity_ulcer=0x7f030006;
         public static final int activity_useragreement=0x7f030007;
-        public static final int ulcer_row=0x7f030008;
+        public static final int camera_dialog=0x7f030008;
+        public static final int ulcer_row=0x7f030009;
     }
     public static final class menu {
         public static final int activity_launcher=0x7f090000;
@@ -138,6 +150,9 @@ containing a value of this type.
         public static final int back=0x7f06000a;
         public static final int decline=0x7f060021;
         public static final int dialog_title=0x7f06001c;
+        public static final int dlg_cancel=0x7f060025;
+        public static final int dlg_from_camera=0x7f060024;
+        public static final int dlg_from_gallery=0x7f060026;
         public static final int female=0x7f06000e;
         public static final int hello_world=0x7f060001;
         public static final int login=0x7f06000b;

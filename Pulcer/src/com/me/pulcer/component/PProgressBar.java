@@ -47,16 +47,16 @@ public class PProgressBar extends RelativeLayout {
 			blue=new TextView(context);
 			blue.setPadding(0, 0, 0, 0);
 			blue.setText("");
-			blue.setBackgroundResource(R.drawable.pg_blue_full);
+//			blue.setBackgroundResource(R.drawable.pg_blue_full);
 			this.addView(blue,bparams);
 			
 			RelativeLayout.LayoutParams gparams=new RelativeLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 			grey=new TextView(context);
 			
 			if(this.getTag()!=null){
-				grey.setBackgroundResource(R.drawable.black_pbar_2);
+//				grey.setBackgroundResource(R.drawable.black_pbar_2);
 			}else{
-				grey.setBackgroundResource(R.drawable.pg_blank_grey);
+//				grey.setBackgroundResource(R.drawable.pg_blank_grey);
 			}
 			
 			
