@@ -17,24 +17,6 @@
         android:text="@string/user_agreement"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <Button
-        android:id="@+id/btnDecline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnAccept"
-        android:layout_alignBottom="@+id/btnAccept"
-        android:layout_alignRight="@+id/txtAgreement"
-        android:text="@string/decline" />
-
-    <Button
-        android:id="@+id/btnAccept"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtAgreement"
-        android:layout_below="@+id/txtAgreement"
-        android:layout_marginTop="20dp"
-        android:text="@string/accept" />
-
     <EditText
         android:id="@+id/txtAgreement"
         android:layout_width="250dp"
@@ -47,5 +29,15 @@
 
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAgreement"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:onClick="okay"
+        android:text="@string/okay" />
 
 </RelativeLayout>

@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:onClick="openSettings"
         android:text="Button" />
 
     <Button
@@ -25,16 +26,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:text="Button" />
-
-    <TextView
-        android:id="@+id/tvRiskAssessment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
-        android:text="@string/riskassessment"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/tvRiskResult"
@@ -54,5 +45,15 @@
         android:layout_below="@+id/tvRiskResult" >
 
     </ListView>
+
+    <TextView
+        android:id="@+id/tvRiskAssessment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/btnSettings"
+        android:text="@string/riskassessment"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
