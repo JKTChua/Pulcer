@@ -32,7 +32,7 @@ public class Login extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-		overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
+		overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
 		mEmail = (EditText)findViewById(R.id.txtEmail);
 		mPassword   = (EditText)findViewById(R.id.txtPassword);
 	}
@@ -167,6 +167,7 @@ public class Login extends Activity
 	public void register(View v)
 	{
 		startActivity(new Intent(Login.this, Register.class));
+		overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
 		finish();
 	}
 

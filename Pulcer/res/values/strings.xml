@@ -63,5 +63,17 @@
 	<color name="dlg_bg_grey">#ebebeb</color>  
 	<color name="list_upcomming_color">#eaf9fc</color>
 	<color name="list_disable_bg">#f2f2f2</color>
+	<string name="name">Name</string>
+	<string name="password">Password</string>
+	<string name="email">Email</string>
+	<string name="confirmPassword">Confirm Password</string>
+	<string name="okay">OK</string>
+	
+	<string name="setting_logout">Logout</string>
+	<string name="setting_edit_profile">Edit Profile</string>
+	<string name="setting_alerts">Alerts</string>
+	<string name="setting_terms">Terms</string>
+	<string name="setting_privacy">Privacy</string>
+	<string name="setting_title">Settings</string>
 
 </resources>

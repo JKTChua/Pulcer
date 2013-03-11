@@ -39,7 +39,7 @@ public class Register extends Activity {
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
-		overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
+		mName = (EditText)findViewById(R.id.txtName);
 		mEmail = (EditText)findViewById(R.id.txtRegisterEmail);
 		mPassword = (EditText)findViewById(R.id.txtRegisterPassword);
 		mPasswordConf = (EditText)findViewById(R.id.txtRegisterPasswordConfirm);
@@ -49,6 +49,7 @@ public class Register extends Activity {
 		
 		mMale.setSelected(true);
 		mMale.setOnClickListener(genderListener);
+		mFemale.setOnClickListener(genderListener);
 	}
 
 	@Override
@@ -148,6 +149,7 @@ public class Register extends Activity {
 		asyncCall.addParam("email", mEmail.getText().toString());
 		asyncCall.addParam("password", mPassword.getText().toString());
 		asyncCall.addParam("birth_date", dateString);
+		asyncCall.addParam("device_token", "00");
 		if(isMale)
 			asyncCall.addParam("gender", "M");
 		else
@@ -164,7 +166,7 @@ public class Register extends Activity {
 					if(Util.validateStr(response.data.accessToken) && response.data.userID!=0){
 						setPref(PApp.Pref_AccessToken,response.data.accessToken);
 						setPref(PApp.Pref_UserID,response.data.userID);
-						startActivity(new Intent(Register.this, UserAgreement.class));
+						startActivity(new Intent(Register.this, Dashboard.class));
 						finish();
 					}else{
 						showErrorMessage(response.errorMsg, getString(R.string.dialog_title));
@@ -234,5 +236,10 @@ public class Register extends Activity {
 	{
 		startActivity(new Intent(Register.this, Login.class));
 		finish();
+	}
+	
+	public void agreement(View v)
+	{
+		startActivity(new Intent(Register.this, UserAgreement.class));
 	}
 }

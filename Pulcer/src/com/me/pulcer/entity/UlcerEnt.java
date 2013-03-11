@@ -16,7 +16,7 @@ public class UlcerEnt implements Serializable
 	private static final long serialVersionUID = 1L;
 
 	@SerializedName("uid")
-	@Column(primary=true,name="ulcer_id")
+	@Column(primary=true,autoincrement=true,name="ulcer_id")
 	public int ulcerId;
 	
 	@SerializedName("gid")
@@ -60,4 +60,11 @@ public class UlcerEnt implements Serializable
 	@SerializedName("image")
 	@Column(name="image")
 	public String image;
+	
+	/**
+	yyyy-MM-dd HH:mm:ss
+	 */
+	@SerializedName("date")
+	@Column(name="date")
+	public String date;
 }

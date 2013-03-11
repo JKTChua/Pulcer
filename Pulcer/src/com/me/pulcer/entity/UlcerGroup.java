@@ -15,13 +15,13 @@ public class UlcerGroup implements Serializable
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@SerializedName("user_id")
-	@Column(primary=true,name="user_id")
-	public int user_id;
-	
 	@SerializedName("gid")
-	@Column(primary=true,name="group_id")
+	@Column(primary=true,autoincrement=true,name="group_id")
 	public int groupId;
+	
+	@SerializedName("user_id")
+	@Column(name="user_id")
+	public int userId;
 	
 	/**
 	0 back of head
@@ -89,7 +89,7 @@ public class UlcerGroup implements Serializable
 	@Column(name="image")
 	public String image;
     
-    public String locationToString(byte loc)
+    public static String locationToString(byte loc)
     {
         switch (loc)
         {

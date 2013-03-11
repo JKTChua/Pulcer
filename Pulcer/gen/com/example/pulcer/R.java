@@ -10,7 +10,9 @@ package com.example.pulcer;
 public final class R {
     public static final class anim {
         public static final int slide_in_left=0x7f040000;
-        public static final int slide_out_left=0x7f040001;
+        public static final int slide_in_right=0x7f040001;
+        public static final int slide_out_left=0x7f040002;
+        public static final int slide_out_right=0x7f040003;
     }
     public static final class attr {
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -66,29 +68,43 @@ containing a value of this type.
     }
     public static final class drawable {
         public static final int avatar_circle=0x7f020000;
-        public static final int capsule=0x7f020001;
-        public static final int green_btn=0x7f020002;
-        public static final int green_btn_pressed=0x7f020003;
-        public static final int green_btn_selector=0x7f020004;
-        public static final int grey_square=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int notification_popup_bg=0x7f020007;
-        public static final int toggle_btn_selector=0x7f020008;
-        public static final int toggle_off=0x7f020009;
-        public static final int toggle_on=0x7f02000a;
-        public static final int white_btn=0x7f02000b;
-        public static final int white_btn_pressed=0x7f02000c;
-        public static final int white_btn_selector=0x7f02000d;
+        public static final int black_backbtn_selector=0x7f020001;
+        public static final int capsule=0x7f020002;
+        public static final int female_active=0x7f020003;
+        public static final int female_inactive=0x7f020004;
+        public static final int gender_female_selector=0x7f020005;
+        public static final int gender_male_selector=0x7f020006;
+        public static final int green_btn=0x7f020007;
+        public static final int green_btn_pressed=0x7f020008;
+        public static final int green_btn_selector=0x7f020009;
+        public static final int grey_square=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int male_active=0x7f02000c;
+        public static final int male_inactive=0x7f02000d;
+        public static final int menu_bg=0x7f02000e;
+        public static final int notification_popup_bg=0x7f02000f;
+        public static final int setting_row_bg=0x7f020010;
+        public static final int setting_row_pressed_bg=0x7f020011;
+        public static final int setting_row_selector=0x7f020012;
+        public static final int setting_row_txt_selector=0x7f020013;
+        public static final int setting_social_back_btn=0x7f020014;
+        public static final int setting_social_back_btn_pressed=0x7f020015;
+        public static final int setting_title_bg=0x7f020016;
+        public static final int toggle_btn_selector=0x7f020017;
+        public static final int toggle_off=0x7f020018;
+        public static final int toggle_on=0x7f020019;
+        public static final int white_btn=0x7f02001a;
+        public static final int white_btn_pressed=0x7f02001b;
+        public static final int white_btn_selector=0x7f02001c;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0a001f;
-        public static final int RelativeLayout1=0x7f0a0023;
-        public static final int action_settings=0x7f0a0025;
+        public static final int LinearLayout1=0x7f0a0027;
+        public static final int RelativeLayout1=0x7f0a002b;
+        public static final int action_settings=0x7f0a002d;
         public static final int btnAccept=0x7f0a001a;
         public static final int btnAddDate=0x7f0a0015;
         public static final int btnAddUlcer=0x7f0a0001;
         public static final int btnBack=0x7f0a000a;
-        public static final int btnDecline=0x7f0a0019;
         public static final int btnFemale=0x7f0a0011;
         public static final int btnLogin=0x7f0a0005;
         public static final int btnMale=0x7f0a0010;
@@ -96,29 +112,38 @@ containing a value of this type.
         public static final int btnSettings=0x7f0a0000;
         public static final int btnUlcerBack=0x7f0a0012;
         public static final int dateDob=0x7f0a000f;
-        public static final int dlg_cancel=0x7f0a001e;
+        public static final int dlg_cancel=0x7f0a001d;
         public static final int edit_message=0x7f0a0016;
-        public static final int from_cam_btn=0x7f0a001d;
-        public static final int from_gallery_btn=0x7f0a001c;
+        public static final int from_cam_btn=0x7f0a001c;
+        public static final int from_gallery_btn=0x7f0a001b;
         public static final int gallery1=0x7f0a0018;
         public static final int lblAgreement=0x7f0a0013;
         public static final int lblStage=0x7f0a0017;
         public static final int lvUlcers=0x7f0a0004;
-        public static final int menu_settings=0x7f0a0024;
+        public static final int menu_settings=0x7f0a002c;
+        public static final int opt_alerts=0x7f0a0023;
+        public static final int opt_edit_profile=0x7f0a0026;
+        public static final int opt_logout=0x7f0a0022;
+        public static final int opt_privacy=0x7f0a0025;
+        public static final int opt_terms=0x7f0a0024;
+        public static final int pTextView2=0x7f0a0020;
+        public static final int setting_back=0x7f0a001f;
+        public static final int setting_root=0x7f0a001e;
+        public static final int settings_options=0x7f0a0021;
         public static final int textView2=0x7f0a0014;
         public static final int tvRegister=0x7f0a0008;
-        public static final int tvRiskAssessment=0x7f0a0002;
-        public static final int tvRiskResult=0x7f0a0003;
-        public static final int txtAgreement=0x7f0a001b;
+        public static final int tvRiskAssessment=0x7f0a0003;
+        public static final int tvRiskResult=0x7f0a0002;
+        public static final int txtAgreement=0x7f0a0019;
         public static final int txtEmail=0x7f0a0006;
         public static final int txtName=0x7f0a000b;
         public static final int txtPassword=0x7f0a0007;
         public static final int txtRegisterEmail=0x7f0a000c;
         public static final int txtRegisterPassword=0x7f0a000d;
         public static final int txtRegisterPasswordConfirm=0x7f0a000e;
-        public static final int ulcer_imgvw=0x7f0a0020;
-        public static final int ulcer_location=0x7f0a0021;
-        public static final int ulcer_stage=0x7f0a0022;
+        public static final int ulcer_imgvw=0x7f0a0028;
+        public static final int ulcer_location=0x7f0a0029;
+        public static final int ulcer_stage=0x7f0a002a;
     }
     public static final class layout {
         public static final int activity_dashboard=0x7f030000;
@@ -126,10 +151,10 @@ containing a value of this type.
         public static final int activity_login=0x7f030002;
         public static final int activity_register=0x7f030003;
         public static final int activity_searchmed=0x7f030004;
-        public static final int activity_settings=0x7f030005;
-        public static final int activity_ulcer=0x7f030006;
-        public static final int activity_useragreement=0x7f030007;
-        public static final int camera_dialog=0x7f030008;
+        public static final int activity_ulcer=0x7f030005;
+        public static final int activity_useragreement=0x7f030006;
+        public static final int camera_dialog=0x7f030007;
+        public static final int setting_menu=0x7f030008;
         public static final int ulcer_row=0x7f030009;
     }
     public static final class menu {
@@ -149,19 +174,30 @@ containing a value of this type.
         public static final int action_settings=0x7f060005;
         public static final int app_name=0x7f060000;
         public static final int back=0x7f06000a;
+        public static final int confirmPassword=0x7f06002b;
         public static final int decline=0x7f060021;
         public static final int dialog_title=0x7f06001c;
         public static final int dlg_cancel=0x7f060026;
         public static final int dlg_from_camera=0x7f060025;
         public static final int dlg_from_gallery=0x7f060027;
+        public static final int email=0x7f06002a;
         public static final int female=0x7f06000e;
         public static final int hello_world=0x7f060001;
         public static final int login=0x7f06000b;
         public static final int male=0x7f06000d;
         public static final int menu_settings=0x7f060002;
+        public static final int name=0x7f060028;
+        public static final int okay=0x7f06002c;
+        public static final int password=0x7f060029;
         public static final int register=0x7f06000c;
         public static final int register_now=0x7f060024;
         public static final int riskassessment=0x7f060023;
+        public static final int setting_alerts=0x7f06002f;
+        public static final int setting_edit_profile=0x7f06002e;
+        public static final int setting_logout=0x7f06002d;
+        public static final int setting_privacy=0x7f060031;
+        public static final int setting_terms=0x7f060030;
+        public static final int setting_title=0x7f060032;
         public static final int title_activity_dashboard=0x7f060008;
         public static final int title_activity_login=0x7f060007;
         public static final int title_activity_main=0x7f060004;
@@ -257,6 +293,7 @@ containing a value of this type.
  <item name="android:textColor">@drawable/setting_edtx_text_selector</item> 
          */
         public static final int SettingEDTX=0x7f080018;
+        public static final int Setting_row=0x7f080019;
         public static final int Text_Big=0x7f08000e;
         public static final int Text_Gray=0x7f080015;
         public static final int Text_Gray_Big=0x7f080016;
