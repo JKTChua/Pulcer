@@ -23,14 +23,14 @@ public class PApp extends HadiApplication {
 	
 	public static final String ACTION_GET_ALL_DETAIL="com.me.pulcer.get_all_detail_action";
 	//Constant
-	public static final String PLUS_PREFERANCE="plus_preferance";
+	public static final String PLUS_PREFERENCE="pulcer_preference";
 	public static final String Pref_AccessToken="pref_access_token";
 	public static final String Pref_UserID="pref_user_id";
 	public static final String Pref_User_Profile_name="pref_user_profile_name";
 	public static final String Pref_User_Email="pref_user_profile_Email";
 	public static final String Pref_User_PWD="pref_user_profile_PWD";
 	public static final String Pref_User_BDate="pref_user_profile_bdate";
-	public static final String Pref_User_gender="pref_user_profile_geneder";
+	public static final String Pref_User_gender="pref_user_profile_gender";
 	public static final String Pref_User_photoUrl="pref_user_profile_photoUrl";
 	public static final String Pref_User_is_app_alert="pref_User_is_app_alert";
 	public static final String Pref_User_is_calendar_alert="pref_User_is_calendar_alert";

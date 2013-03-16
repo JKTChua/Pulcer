@@ -11,11 +11,31 @@
         <com.me.pulcer.component.PTextView android:id="@+id/pTextView2" style="@style/Text.White.Medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:text="@string/setting_title" android:textAppearance="?android:attr/textAppearanceMedium"/>
     </RelativeLayout>
     <LinearLayout android:id="@+id/settings_options" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
-        <com.me.pulcer.component.PTextView android:id="@+id/opt_logout" style="@style/Setting_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/setting_row_selector" app:font_file="FS Joey-Medium.otf" android:text="@string/setting_logout"/>
+
+        <com.me.pulcer.component.PTextView
+            android:id="@+id/opt_edit_profile"
+            style="@style/Setting_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_row_selector"
+            android:onClick="editProfile"
+            android:text="@string/setting_edit_profile"
+            app:font_file="FS Joey-Medium.otf" />
+
         <com.me.pulcer.component.PTextView android:id="@+id/opt_alerts" style="@style/Setting_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/setting_row_selector" app:font_file="FS Joey-Medium.otf" android:text="@string/setting_alerts"/>
         <com.me.pulcer.component.PTextView android:id="@+id/opt_terms" style="@style/Setting_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/setting_row_selector" app:font_file="FS Joey-Medium.otf" android:text="@string/setting_terms"/>
         <com.me.pulcer.component.PTextView android:id="@+id/opt_privacy" style="@style/Setting_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/setting_row_selector" app:font_file="FS Joey-Medium.otf" android:text="@string/setting_privacy"/>
-        <com.me.pulcer.component.PTextView android:id="@+id/opt_edit_profile" style="@style/Setting_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/setting_row_selector" app:font_file="FS Joey-Medium.otf" android:text="@string/setting_edit_profile"/>
+
+        <com.me.pulcer.component.PTextView
+            android:id="@+id/opt_logout"
+            style="@style/Setting_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_row_selector"
+            android:onClick="logout"
+            android:text="@string/setting_logout"
+            app:font_file="FS Joey-Medium.otf" />
+
     </LinearLayout>
     
 </LinearLayout>

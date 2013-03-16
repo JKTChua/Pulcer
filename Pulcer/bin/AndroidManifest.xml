@@ -81,6 +81,10 @@
             android:name="com.example.pulcer.Ulcer"
             android:label="@string/title_activity_ulcer" >
         </activity>
+        <activity
+            android:name="com.example.pulcer.Survey"
+            android:label="@string/title_activity_survey" >
+        </activity>
     </application>
 
 </manifest>

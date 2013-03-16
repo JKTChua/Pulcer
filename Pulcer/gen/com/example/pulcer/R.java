@@ -14,6 +14,10 @@ public final class R {
         public static final int slide_out_left=0x7f040002;
         public static final int slide_out_right=0x7f040003;
     }
+    public static final class array {
+        public static final int accordion_sections=0x7f080000;
+        public static final int accordion_visibility=0x7f080001;
+    }
     public static final class attr {
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
@@ -22,7 +26,39 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static final int custom_font=0x7f010008;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static final int font_file=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int header_layout_fold_button_id=0x7f010006;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int header_layout_id=0x7f010005;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int header_layout_label_id=0x7f010007;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int icon_label=0x7f010003;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int icon_resource=0x7f010002;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int icon_resource_off=0x7f010004;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -31,30 +67,54 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int second_drawable=0x7f010000;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int section_bottom=0x7f01000c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int section_container=0x7f01000a;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int section_container_parent=0x7f01000b;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int section_headers=0x7f010009;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int section_visibility=0x7f01000d;
     }
     public static final class color {
-        public static final int Black=0x7f070002;
-        public static final int Gray_Dark=0x7f070004;
-        public static final int Green=0x7f070000;
-        public static final int White=0x7f070001;
-        public static final int dlg_back=0x7f07000c;
-        public static final int dlg_bg_grey=0x7f070011;
-        public static final int dlg_txt_gray=0x7f070010;
-        public static final int ligth_black=0x7f070005;
-        public static final int list_disable_bg=0x7f070013;
-        public static final int list_upcomming_color=0x7f070012;
-        public static final int setting_txt_gray=0x7f070009;
-        public static final int tab_txt_active=0x7f07000b;
-        public static final int tab_txt_disable=0x7f07000a;
-        public static final int text_black=0x7f070003;
-        public static final int trans_1=0x7f07000e;
-        public static final int transparent=0x7f07000d;
-        public static final int txt_black=0x7f070008;
-        public static final int txt_gray=0x7f070006;
+        public static final int Black=0x7f050006;
+        public static final int Gray_Dark=0x7f050008;
+        public static final int Green=0x7f050004;
+        public static final int White=0x7f050005;
+        public static final int border_color=0x7f050000;
+        public static final int dlg_back=0x7f050010;
+        public static final int dlg_bg_grey=0x7f050015;
+        public static final int dlg_txt_gray=0x7f050014;
+        public static final int header_border_shadow=0x7f050002;
+        public static final int header_color=0x7f050001;
+        public static final int ligth_black=0x7f050009;
+        public static final int list_disable_bg=0x7f050017;
+        public static final int list_upcomming_color=0x7f050016;
+        public static final int section_color=0x7f050003;
+        public static final int setting_txt_gray=0x7f05000d;
+        public static final int tab_txt_active=0x7f05000f;
+        public static final int tab_txt_disable=0x7f05000e;
+        public static final int text_black=0x7f050007;
+        public static final int trans_1=0x7f050012;
+        public static final int transparent=0x7f050011;
+        public static final int txt_black=0x7f05000c;
+        public static final int txt_gray=0x7f05000a;
         /**  a6a6a6 
          */
-        public static final int txt_green=0x7f070007;
-        public static final int user_list_bg=0x7f07000f;
+        public static final int txt_green=0x7f05000b;
+        public static final int user_list_bg=0x7f050013;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -63,164 +123,194 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int avatar_circle=0x7f020000;
         public static final int black_backbtn_selector=0x7f020001;
         public static final int capsule=0x7f020002;
-        public static final int female_active=0x7f020003;
-        public static final int female_inactive=0x7f020004;
-        public static final int gender_female_selector=0x7f020005;
-        public static final int gender_male_selector=0x7f020006;
-        public static final int green_btn=0x7f020007;
-        public static final int green_btn_pressed=0x7f020008;
-        public static final int green_btn_selector=0x7f020009;
-        public static final int grey_square=0x7f02000a;
-        public static final int ic_launcher=0x7f02000b;
-        public static final int male_active=0x7f02000c;
-        public static final int male_inactive=0x7f02000d;
-        public static final int menu_bg=0x7f02000e;
-        public static final int notification_popup_bg=0x7f02000f;
-        public static final int setting_row_bg=0x7f020010;
-        public static final int setting_row_pressed_bg=0x7f020011;
-        public static final int setting_row_selector=0x7f020012;
-        public static final int setting_row_txt_selector=0x7f020013;
-        public static final int setting_social_back_btn=0x7f020014;
-        public static final int setting_social_back_btn_pressed=0x7f020015;
-        public static final int setting_title_bg=0x7f020016;
-        public static final int toggle_btn_selector=0x7f020017;
-        public static final int toggle_off=0x7f020018;
-        public static final int toggle_on=0x7f020019;
-        public static final int white_btn=0x7f02001a;
-        public static final int white_btn_pressed=0x7f02001b;
-        public static final int white_btn_selector=0x7f02001c;
+        public static final int down=0x7f020003;
+        public static final int female_active=0x7f020004;
+        public static final int female_inactive=0x7f020005;
+        public static final int footer_bg=0x7f020006;
+        public static final int footer_border=0x7f020007;
+        public static final int footer_solid=0x7f020008;
+        public static final int gender_female_selector=0x7f020009;
+        public static final int gender_male_selector=0x7f02000a;
+        public static final int green_btn=0x7f02000b;
+        public static final int green_btn_pressed=0x7f02000c;
+        public static final int green_btn_selector=0x7f02000d;
+        public static final int grey_square=0x7f02000e;
+        public static final int header_bg=0x7f02000f;
+        public static final int header_border=0x7f020010;
+        public static final int header_solid=0x7f020011;
+        public static final int header_solid_inner=0x7f020012;
+        public static final int header_solid_outer=0x7f020013;
+        public static final int ic_launcher=0x7f020014;
+        public static final int male_active=0x7f020015;
+        public static final int male_inactive=0x7f020016;
+        public static final int menu_bg=0x7f020017;
+        public static final int notification_popup_bg=0x7f020018;
+        public static final int section=0x7f020019;
+        public static final int section_border=0x7f02001a;
+        public static final int section_solid=0x7f02001b;
+        public static final int setting_row_bg=0x7f02001c;
+        public static final int setting_row_pressed_bg=0x7f02001d;
+        public static final int setting_row_selector=0x7f02001e;
+        public static final int setting_row_txt_selector=0x7f02001f;
+        public static final int setting_social_back_btn=0x7f020020;
+        public static final int setting_social_back_btn_pressed=0x7f020021;
+        public static final int setting_title_bg=0x7f020022;
+        public static final int toggle_btn_selector=0x7f020023;
+        public static final int toggle_off=0x7f020024;
+        public static final int toggle_on=0x7f020025;
+        public static final int up=0x7f020026;
+        public static final int white_btn=0x7f020027;
+        public static final int white_btn_pressed=0x7f020028;
+        public static final int white_btn_selector=0x7f020029;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0a0027;
-        public static final int RelativeLayout1=0x7f0a002b;
-        public static final int action_settings=0x7f0a002d;
-        public static final int btnAccept=0x7f0a001a;
-        public static final int btnAddDate=0x7f0a0015;
-        public static final int btnAddUlcer=0x7f0a0001;
-        public static final int btnBack=0x7f0a000a;
-        public static final int btnFemale=0x7f0a0011;
-        public static final int btnLogin=0x7f0a0005;
-        public static final int btnMale=0x7f0a0010;
-        public static final int btnRegister=0x7f0a0009;
-        public static final int btnSettings=0x7f0a0000;
-        public static final int btnUlcerBack=0x7f0a0012;
-        public static final int dateDob=0x7f0a000f;
-        public static final int dlg_cancel=0x7f0a001d;
-        public static final int edit_message=0x7f0a0016;
-        public static final int from_cam_btn=0x7f0a001c;
-        public static final int from_gallery_btn=0x7f0a001b;
-        public static final int gallery1=0x7f0a0018;
-        public static final int lblAgreement=0x7f0a0013;
-        public static final int lblStage=0x7f0a0017;
-        public static final int lvUlcers=0x7f0a0004;
-        public static final int menu_settings=0x7f0a002c;
-        public static final int opt_alerts=0x7f0a0023;
-        public static final int opt_edit_profile=0x7f0a0026;
-        public static final int opt_logout=0x7f0a0022;
-        public static final int opt_privacy=0x7f0a0025;
-        public static final int opt_terms=0x7f0a0024;
-        public static final int pTextView2=0x7f0a0020;
-        public static final int setting_back=0x7f0a001f;
-        public static final int setting_root=0x7f0a001e;
-        public static final int settings_options=0x7f0a0021;
-        public static final int textView2=0x7f0a0014;
-        public static final int tvRegister=0x7f0a0008;
-        public static final int tvRiskAssessment=0x7f0a0003;
-        public static final int tvRiskResult=0x7f0a0002;
-        public static final int txtAgreement=0x7f0a0019;
-        public static final int txtEmail=0x7f0a0006;
-        public static final int txtName=0x7f0a000b;
-        public static final int txtPassword=0x7f0a0007;
-        public static final int txtRegisterEmail=0x7f0a000c;
-        public static final int txtRegisterPassword=0x7f0a000d;
-        public static final int txtRegisterPasswordConfirm=0x7f0a000e;
-        public static final int ulcer_imgvw=0x7f0a0028;
-        public static final int ulcer_location=0x7f0a0029;
-        public static final int ulcer_stage=0x7f0a002a;
+        public static final int LinearLayout1=0x7f0b0030;
+        public static final int RelativeLayout1=0x7f0b0034;
+        public static final int accordion_view=0x7f0b0022;
+        public static final int action_settings=0x7f0b0036;
+        public static final int btnAccept=0x7f0b001e;
+        public static final int btnAddDate=0x7f0b0019;
+        public static final int btnAddUlcer=0x7f0b0005;
+        public static final int btnBack=0x7f0b000e;
+        public static final int btnFemale=0x7f0b0015;
+        public static final int btnLogin=0x7f0b0009;
+        public static final int btnMale=0x7f0b0014;
+        public static final int btnRegister=0x7f0b000d;
+        public static final int btnSettings=0x7f0b0004;
+        public static final int btnUlcerBack=0x7f0b0016;
+        public static final int dateDob=0x7f0b0013;
+        public static final int dlg_cancel=0x7f0b0021;
+        public static final int editText1=0x7f0b0025;
+        public static final int edit_message=0x7f0b001a;
+        public static final int example_get_by_id=0x7f0b0023;
+        public static final int foldButton=0x7f0b0001;
+        public static final int foldText=0x7f0b0002;
+        public static final int from_cam_btn=0x7f0b0020;
+        public static final int from_gallery_btn=0x7f0b001f;
+        public static final int gallery1=0x7f0b001c;
+        public static final int lblAgreement=0x7f0b0017;
+        public static final int lblStage=0x7f0b001b;
+        public static final int lvUlcers=0x7f0b0008;
+        public static final int mainlayout=0x7f0b0000;
+        public static final int menu_settings=0x7f0b0035;
+        public static final int opt_alerts=0x7f0b002c;
+        public static final int opt_edit_profile=0x7f0b002b;
+        public static final int opt_logout=0x7f0b002f;
+        public static final int opt_privacy=0x7f0b002e;
+        public static final int opt_terms=0x7f0b002d;
+        public static final int pTextView2=0x7f0b0029;
+        public static final int ratingBar1=0x7f0b0024;
+        public static final int section_content=0x7f0b0003;
+        public static final int seekBar1=0x7f0b0026;
+        public static final int setting_back=0x7f0b0028;
+        public static final int setting_root=0x7f0b0027;
+        public static final int settings_options=0x7f0b002a;
+        public static final int textView2=0x7f0b0018;
+        public static final int tvRegister=0x7f0b000c;
+        public static final int tvRiskAssessment=0x7f0b0007;
+        public static final int tvRiskResult=0x7f0b0006;
+        public static final int txtAgreement=0x7f0b001d;
+        public static final int txtEmail=0x7f0b000a;
+        public static final int txtName=0x7f0b000f;
+        public static final int txtPassword=0x7f0b000b;
+        public static final int txtRegisterEmail=0x7f0b0010;
+        public static final int txtRegisterPassword=0x7f0b0011;
+        public static final int txtRegisterPasswordConfirm=0x7f0b0012;
+        public static final int ulcer_imgvw=0x7f0b0031;
+        public static final int ulcer_location=0x7f0b0032;
+        public static final int ulcer_stage=0x7f0b0033;
     }
     public static final class layout {
-        public static final int activity_dashboard=0x7f030000;
-        public static final int activity_launcher=0x7f030001;
-        public static final int activity_login=0x7f030002;
-        public static final int activity_register=0x7f030003;
-        public static final int activity_searchmed=0x7f030004;
-        public static final int activity_ulcer=0x7f030005;
-        public static final int activity_useragreement=0x7f030006;
-        public static final int camera_dialog=0x7f030007;
-        public static final int setting_menu=0x7f030008;
-        public static final int ulcer_row=0x7f030009;
+        public static final int accordion_footer=0x7f030000;
+        public static final int accordion_header=0x7f030001;
+        public static final int accordion_section=0x7f030002;
+        public static final int activity_dashboard=0x7f030003;
+        public static final int activity_launcher=0x7f030004;
+        public static final int activity_login=0x7f030005;
+        public static final int activity_register=0x7f030006;
+        public static final int activity_searchmed=0x7f030007;
+        public static final int activity_ulcer=0x7f030008;
+        public static final int activity_useragreement=0x7f030009;
+        public static final int camera_dialog=0x7f03000a;
+        public static final int main=0x7f03000b;
+        public static final int setting_menu=0x7f03000c;
+        public static final int ulcer_row=0x7f03000d;
     }
     public static final class menu {
-        public static final int activity_launcher=0x7f090000;
-        public static final int activity_settings=0x7f090001;
-        public static final int dashboard=0x7f090002;
-        public static final int login=0x7f090003;
-        public static final int main=0x7f090004;
-        public static final int register=0x7f090005;
-        public static final int searchmed=0x7f090006;
-        public static final int ulcer=0x7f090007;
-        public static final int user_list=0x7f090008;
-        public static final int useragreement=0x7f090009;
+        public static final int activity_launcher=0x7f0a0000;
+        public static final int activity_settings=0x7f0a0001;
+        public static final int dashboard=0x7f0a0002;
+        public static final int login=0x7f0a0003;
+        public static final int main=0x7f0a0004;
+        public static final int register=0x7f0a0005;
+        public static final int searchmed=0x7f0a0006;
+        public static final int ulcer=0x7f0a0007;
+        public static final int user_list=0x7f0a0008;
+        public static final int useragreement=0x7f0a0009;
     }
     public static final class string {
-        public static final int accept=0x7f060020;
-        public static final int action_settings=0x7f060005;
-        public static final int app_name=0x7f060000;
-        public static final int back=0x7f06000a;
-        public static final int confirmPassword=0x7f06002b;
-        public static final int decline=0x7f060021;
-        public static final int dialog_title=0x7f06001c;
-        public static final int dlg_cancel=0x7f060026;
-        public static final int dlg_from_camera=0x7f060025;
-        public static final int dlg_from_gallery=0x7f060027;
-        public static final int email=0x7f06002a;
-        public static final int female=0x7f06000e;
-        public static final int hello_world=0x7f060001;
-        public static final int login=0x7f06000b;
-        public static final int male=0x7f06000d;
-        public static final int menu_settings=0x7f060002;
-        public static final int name=0x7f060028;
-        public static final int okay=0x7f06002c;
-        public static final int password=0x7f060029;
-        public static final int register=0x7f06000c;
-        public static final int register_now=0x7f060024;
-        public static final int riskassessment=0x7f060023;
-        public static final int setting_alerts=0x7f06002f;
-        public static final int setting_edit_profile=0x7f06002e;
-        public static final int setting_logout=0x7f06002d;
-        public static final int setting_privacy=0x7f060031;
-        public static final int setting_terms=0x7f060030;
-        public static final int setting_title=0x7f060032;
-        public static final int title_activity_dashboard=0x7f060008;
-        public static final int title_activity_login=0x7f060007;
-        public static final int title_activity_main=0x7f060004;
-        public static final int title_activity_register=0x7f060009;
-        public static final int title_activity_searchmed=0x7f06001d;
-        public static final int title_activity_settings=0x7f060003;
-        public static final int title_activity_ulcer=0x7f06001f;
-        public static final int title_activity_user_list=0x7f060006;
-        public static final int title_activity_useragreement=0x7f06001e;
-        public static final int user_agreement=0x7f060022;
-        public static final int validate_bdate_msg=0x7f060019;
-        public static final int validate_bday_msg=0x7f060017;
-        public static final int validate_cnf_pwd_msg=0x7f060014;
-        public static final int validate_cnf_pwd_not_match=0x7f060015;
-        public static final int validate_email_invalid_msg=0x7f060010;
-        public static final int validate_email_msg=0x7f06000f;
-        public static final int validate_loggedin_user=0x7f06001a;
-        public static final int validate_name_msg=0x7f060018;
-        public static final int validate_new_pwd_msg=0x7f060013;
-        public static final int validate_old_pwd_msg=0x7f060012;
-        public static final int validate_pwd_length_msg=0x7f060016;
-        public static final int validate_pwd_msg=0x7f060011;
-        public static final int validate_search_pill=0x7f06001b;
+        public static final int accept=0x7f070021;
+        public static final int action_settings=0x7f070005;
+        public static final int app_name=0x7f070000;
+        public static final int back=0x7f07000a;
+        public static final int btn_save=0x7f070036;
+        public static final int confirmPassword=0x7f07002c;
+        public static final int decline=0x7f070022;
+        public static final int dialog_title=0x7f07001c;
+        public static final int dlg_cancel=0x7f070027;
+        public static final int dlg_from_camera=0x7f070026;
+        public static final int dlg_from_gallery=0x7f070028;
+        public static final int email=0x7f07002b;
+        public static final int female=0x7f07000e;
+        public static final int hello_world=0x7f070001;
+        public static final int login=0x7f07000b;
+        public static final int male=0x7f07000d;
+        public static final int menu_settings=0x7f070002;
+        public static final int name=0x7f070029;
+        public static final int okay=0x7f07002d;
+        public static final int password=0x7f07002a;
+        public static final int progress_title_updating_profile=0x7f070035;
+        public static final int register=0x7f07000c;
+        public static final int register_now=0x7f070025;
+        public static final int riskassessment=0x7f070024;
+        public static final int setting_alerts=0x7f070030;
+        public static final int setting_edit_profile=0x7f07002f;
+        public static final int setting_logout=0x7f07002e;
+        public static final int setting_privacy=0x7f070032;
+        public static final int setting_terms=0x7f070031;
+        public static final int setting_title=0x7f070033;
+        public static final int title_activity_dashboard=0x7f070008;
+        public static final int title_activity_login=0x7f070007;
+        public static final int title_activity_main=0x7f070004;
+        public static final int title_activity_register=0x7f070009;
+        public static final int title_activity_searchmed=0x7f07001d;
+        public static final int title_activity_settings=0x7f070003;
+        public static final int title_activity_survey=0x7f070020;
+        public static final int title_activity_ulcer=0x7f07001f;
+        public static final int title_activity_user_list=0x7f070006;
+        public static final int title_activity_useragreement=0x7f07001e;
+        public static final int update_profile=0x7f070034;
+        public static final int user_agreement=0x7f070023;
+        public static final int validate_bdate_msg=0x7f070019;
+        public static final int validate_bday_msg=0x7f070017;
+        public static final int validate_cnf_pwd_msg=0x7f070014;
+        public static final int validate_cnf_pwd_not_match=0x7f070015;
+        public static final int validate_email_invalid_msg=0x7f070010;
+        public static final int validate_email_msg=0x7f07000f;
+        public static final int validate_loggedin_user=0x7f07001a;
+        public static final int validate_name_msg=0x7f070018;
+        public static final int validate_new_pwd_msg=0x7f070013;
+        public static final int validate_old_pwd_msg=0x7f070012;
+        public static final int validate_pwd_length_msg=0x7f070016;
+        public static final int validate_pwd_msg=0x7f070011;
+        public static final int validate_search_pill=0x7f07001b;
     }
     public static final class style {
         /**  
@@ -238,13 +328,13 @@ containing a value of this type.
     </style>
      
          */
-        public static final int AddPill_Text_Large=0x7f08000b;
-        public static final int AddPill_Text_Medium=0x7f08000d;
-        public static final int AddPill_Text_Small=0x7f08000c;
+        public static final int AddPill_Text_Large=0x7f09000b;
+        public static final int AddPill_Text_Medium=0x7f09000d;
+        public static final int AddPill_Text_Small=0x7f09000c;
         /**  <item name="android:windowAnimationStyle">@style/SlideDialog</item> 
  <item name="android:checkboxStyle">@style/PCheckBox</item> 
          */
-        public static final int AddPillDialog=0x7f080006;
+        public static final int AddPillDialog=0x7f090006;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -255,14 +345,14 @@ containing a value of this type.
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f080000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080001;
+        public static final int AppTheme=0x7f090001;
         /**   <item name="android:drawableRight">@drawable/cross_btn</item> 
          */
-        public static final int PEditTextst=0x7f080017;
+        public static final int PEditTextst=0x7f090017;
         /**  
     <style name="SlideDialog">
         <item name="android:windowEnterAnimation">@anim/slide_up</item>
@@ -275,36 +365,36 @@ containing a value of this type.
     </style>
      
          */
-        public static final int PLabel_Big=0x7f080007;
-        public static final int PLabel_Big_Gray=0x7f080008;
-        public static final int PLabel_medium=0x7f08000a;
-        public static final int PLabel_small_Gray=0x7f080009;
+        public static final int PLabel_Big=0x7f090007;
+        public static final int PLabel_Big_Gray=0x7f090008;
+        public static final int PLabel_medium=0x7f09000a;
+        public static final int PLabel_small_Gray=0x7f090009;
         /**  
     <style name="PCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
       <item name="android:button">@drawable/chk_box_selector</item>  
     </style>
      
          */
-        public static final int PToggle=0x7f080005;
+        public static final int PToggle=0x7f090005;
         /**  <item name="android:checkboxStyle">@style/PCheckBox</item> 
          */
-        public static final int PlusDialog=0x7f080004;
+        public static final int PlusDialog=0x7f090004;
         /**  <item name="android:textColorHint" >@drawable/setting_edtx_text_selector</item> 
  <item name="android:textColor">@drawable/setting_edtx_text_selector</item> 
          */
-        public static final int SettingEDTX=0x7f080018;
-        public static final int Setting_row=0x7f080019;
-        public static final int Text_Big=0x7f08000e;
-        public static final int Text_Gray=0x7f080015;
-        public static final int Text_Gray_Big=0x7f080016;
-        public static final int Text_Gray_Small=0x7f080014;
-        public static final int Text_Medium=0x7f08000f;
-        public static final int Text_Small=0x7f080010;
-        public static final int Text_White_Big=0x7f080011;
-        public static final int Text_White_Medium=0x7f080012;
-        public static final int Text_White_Small=0x7f080013;
-        public static final int dark_bold_header=0x7f080003;
-        public static final int dark_header_base=0x7f080002;
+        public static final int SettingEDTX=0x7f090018;
+        public static final int Setting_row=0x7f090019;
+        public static final int Text_Big=0x7f09000e;
+        public static final int Text_Gray=0x7f090015;
+        public static final int Text_Gray_Big=0x7f090016;
+        public static final int Text_Gray_Small=0x7f090014;
+        public static final int Text_Medium=0x7f09000f;
+        public static final int Text_Small=0x7f090010;
+        public static final int Text_White_Big=0x7f090011;
+        public static final int Text_White_Medium=0x7f090012;
+        public static final int Text_White_Small=0x7f090013;
+        public static final int dark_bold_header=0x7f090003;
+        public static final int dark_header_base=0x7f090002;
     }
     public static final class styleable {
         /** Attributes that can be used with a PProgressBar.
@@ -361,5 +451,188 @@ containing a value of this type.
           @attr name android:font_file
         */
         public static final int PTextView_font_file = 0;
+        /** Attributes that can be used with a accordion.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #accordion_custom_font com.example.pulcer:custom_font}</code></td><td></td></tr>
+           <tr><td><code>{@link #accordion_header_layout_fold_button_id com.example.pulcer:header_layout_fold_button_id}</code></td><td></td></tr>
+           <tr><td><code>{@link #accordion_header_layout_id com.example.pulcer:header_layout_id}</code></td><td></td></tr>
+           <tr><td><code>{@link #accordion_header_layout_label_id com.example.pulcer:header_layout_label_id}</code></td><td></td></tr>
+           <tr><td><code>{@link #accordion_section_bottom com.example.pulcer:section_bottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #accordion_section_container com.example.pulcer:section_container}</code></td><td></td></tr>
+           <tr><td><code>{@link #accordion_section_container_parent com.example.pulcer:section_container_parent}</code></td><td></td></tr>
+           <tr><td><code>{@link #accordion_section_headers com.example.pulcer:section_headers}</code></td><td></td></tr>
+           <tr><td><code>{@link #accordion_section_visibility com.example.pulcer:section_visibility}</code></td><td></td></tr>
+           </table>
+           @see #accordion_custom_font
+           @see #accordion_header_layout_fold_button_id
+           @see #accordion_header_layout_id
+           @see #accordion_header_layout_label_id
+           @see #accordion_section_bottom
+           @see #accordion_section_container
+           @see #accordion_section_container_parent
+           @see #accordion_section_headers
+           @see #accordion_section_visibility
+         */
+        public static final int[] accordion = {
+            0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008,
+            0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c,
+            0x7f01000d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#custom_font}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:custom_font
+        */
+        public static final int accordion_custom_font = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#header_layout_fold_button_id}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:header_layout_fold_button_id
+        */
+        public static final int accordion_header_layout_fold_button_id = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#header_layout_id}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:header_layout_id
+        */
+        public static final int accordion_header_layout_id = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#header_layout_label_id}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:header_layout_label_id
+        */
+        public static final int accordion_header_layout_label_id = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#section_bottom}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:section_bottom
+        */
+        public static final int accordion_section_bottom = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#section_container}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:section_container
+        */
+        public static final int accordion_section_container = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#section_container_parent}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:section_container_parent
+        */
+        public static final int accordion_section_container_parent = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#section_headers}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:section_headers
+        */
+        public static final int accordion_section_headers = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#section_visibility}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:section_visibility
+        */
+        public static final int accordion_section_visibility = 8;
+        /** Attributes that can be used with a image_labeled_button.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #image_labeled_button_icon_label com.example.pulcer:icon_label}</code></td><td></td></tr>
+           <tr><td><code>{@link #image_labeled_button_icon_resource com.example.pulcer:icon_resource}</code></td><td></td></tr>
+           </table>
+           @see #image_labeled_button_icon_label
+           @see #image_labeled_button_icon_resource
+         */
+        public static final int[] image_labeled_button = {
+            0x7f010002, 0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#icon_label}
+          attribute's value can be found in the {@link #image_labeled_button} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:icon_label
+        */
+        public static final int image_labeled_button_icon_label = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#icon_resource}
+          attribute's value can be found in the {@link #image_labeled_button} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:icon_resource
+        */
+        public static final int image_labeled_button_icon_resource = 0;
+        /** Attributes that can be used with a toggle_image_labeled_button.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #toggle_image_labeled_button_icon_resource_off com.example.pulcer:icon_resource_off}</code></td><td></td></tr>
+           </table>
+           @see #toggle_image_labeled_button_icon_resource_off
+         */
+        public static final int[] toggle_image_labeled_button = {
+            0x7f010004
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#icon_resource_off}
+          attribute's value can be found in the {@link #toggle_image_labeled_button} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:icon_resource_off
+        */
+        public static final int toggle_image_labeled_button_icon_resource_off = 0;
     };
 }

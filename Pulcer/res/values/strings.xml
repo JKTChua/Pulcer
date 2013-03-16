@@ -33,6 +33,7 @@
     <string name="title_activity_searchmed">Searchmed</string>
     <string name="title_activity_useragreement">UserAgreement</string>
     <string name="title_activity_ulcer">Ulcer</string>
+    <string name="title_activity_survey">Survey</string>
     <string name="accept">Accept</string>
     <string name="decline">Decline</string>
     <string name="user_agreement">User Agreement</string>
@@ -75,5 +76,24 @@
 	<string name="setting_terms">Terms</string>
 	<string name="setting_privacy">Privacy</string>
 	<string name="setting_title">Settings</string>
+	<string name="update_profile">Edit Profile</string>
+	<string name="progress_title_updating_profile">Updating profile. Please wait...</string>
+	<string name="btn_save">Save</string>
+	
+	<string-array name="accordion_sections">
+        <item>Section A</item>
+        <item>Section B</item>
+        <item>Section C</item>
+        <item>Section D</item>
+        <item>Section E</item>
+    </string-array>
+
+    <integer-array name="accordion_visibility">
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
 
 </resources>

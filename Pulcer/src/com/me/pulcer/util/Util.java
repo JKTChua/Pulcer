@@ -306,11 +306,11 @@ public class Util
 	    return dp;
 	}
 	public static String getStrPref(Context context,String key){
-		SharedPreferences preferences=context.getSharedPreferences(PApp.PLUS_PREFERANCE, Context.MODE_PRIVATE);
+		SharedPreferences preferences=context.getSharedPreferences(PApp.PLUS_PREFERENCE, Context.MODE_PRIVATE);
 		return preferences.getString(key, "");
 	}
 	public static int getIntPref(Context context,String key){
-		SharedPreferences preferences=context.getSharedPreferences(PApp.PLUS_PREFERANCE, Context.MODE_PRIVATE);
+		SharedPreferences preferences=context.getSharedPreferences(PApp.PLUS_PREFERENCE, Context.MODE_PRIVATE);
 		return preferences.getInt(key, 0);
 	}
 	

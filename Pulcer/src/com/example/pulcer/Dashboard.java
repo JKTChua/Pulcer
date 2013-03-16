@@ -71,6 +71,11 @@ public class Dashboard extends Activity
 		startActivity(new Intent(Dashboard.this, Settings.class));
 	}
 	
+	public void newUlcer(View v)
+	{
+		startActivity(new Intent(Dashboard.this, Survey.class));
+	}
+	
 	protected void loadFromDb()
 	{
 		DefaultDAO dao = new DefaultDAO(this);

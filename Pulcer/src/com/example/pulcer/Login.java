@@ -58,7 +58,7 @@ public class Login extends Activity
     //set preference for access token
     public void setPref(String key,String value)
     {
-		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERANCE, MODE_PRIVATE);
+		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERENCE, MODE_PRIVATE);
 		SharedPreferences.Editor editor=pref.edit();
 		editor.putString(key, value);
 		editor.commit();
@@ -67,7 +67,7 @@ public class Login extends Activity
     //set preference for userID
     public void setPref(String key,int value)
     {
-		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERANCE, MODE_PRIVATE);
+		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERENCE, MODE_PRIVATE);
 		SharedPreferences.Editor editor=pref.edit();
 		editor.putInt(key, value);
 		editor.commit();
@@ -140,6 +140,7 @@ public class Login extends Activity
 					{
 						setPref(PApp.Pref_AccessToken,response.data.accessToken);
 						setPref(PApp.Pref_UserID,response.data.userID);
+						setUserData(response);
 						startActivity(new Intent(Login.this, Dashboard.class));
 						finish();
 					}
@@ -169,6 +170,26 @@ public class Login extends Activity
 		startActivity(new Intent(Login.this, Register.class));
 		overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
 		finish();
+	}
+	
+	private void setUserData(LoginParser response)
+	{
+		if(response!=null && response.data!=null)
+		{
+			setPref(PApp.Pref_User_Profile_name, response.data.profileName);
+			setPref(PApp.Pref_User_Email, response.data.email);
+			setPref(PApp.Pref_User_BDate, response.data.birthData);
+			setPref(PApp.Pref_User_gender, response.data.gender);
+			setPref(PApp.Pref_User_photoUrl, response.data.photoUrl);
+			
+			setPref(PApp.Pref_User_is_app_alert, response.data.isAppAlert);
+			setPref(PApp.Pref_User_is_calendar_alert, response.data.isCalenderAlert);
+			setPref(PApp.Pref_User_is_email_alert, response.data.isEmailAlert);
+			setPref(PApp.Pref_User_is_phone_alert, response.data.isPhoneAlert);
+			
+			setPref(PApp.Pref_User_alert_email, response.data.alertEmail);
+			setPref(PApp.Pref_User_alert_phone, response.data.alertPhone);
+		}
 	}
 
 }
