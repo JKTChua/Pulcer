@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:onClick="register"
+        android:onClick="next"
         android:text="@string/register" />
 
     <Button

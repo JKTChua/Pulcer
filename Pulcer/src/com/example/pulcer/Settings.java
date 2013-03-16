@@ -2,21 +2,12 @@ package com.example.pulcer;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 
 public class Settings extends Activity
 {
-	
-	private User list[];
-	
-	private class User
-	{
-		String name;
-		public User(String user_name)
-		{
-			name = user_name;
-		}
-	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -33,9 +24,24 @@ public class Settings extends Activity
 		return true;
 	}
 	
-	private boolean populateUserList()
+	public void editProfile(View v)
 	{
-		return true;
+		Intent intent=new Intent(Settings.this, Register.class);
+		intent.putExtra("IS_EDIT", true);
+		startActivity(intent);
+	}
+	
+	public void logout(View v)
+	{
+		Intent intent=new Intent(Settings.this, Login.class);
+		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(intent);
+		finish();
+	}
+	
+	public void terms(View v)
+	{
+		
 	}
 
 }

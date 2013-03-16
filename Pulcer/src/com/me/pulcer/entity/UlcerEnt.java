@@ -24,6 +24,7 @@ public class UlcerEnt implements Serializable
 	public int groupId;
 	
 	/**
+	0 deep tissue injury
 	1 
 	2
 	3

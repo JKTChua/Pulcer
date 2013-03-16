@@ -1,6 +1,7 @@
 package com.example.pulcer;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import com.google.gson.Gson;
@@ -27,11 +28,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Register extends Activity {
-
+	
+	boolean isEdit=false;
+	
 	EditText mName, mEmail, mPassword, mPasswordConf;
 	Button mMale, mFemale;
 	DatePicker mDate;
 	String dateString;
+	boolean isMale;
 	public AsyncCall asyncCall;
 	
 	@Override
@@ -50,6 +54,12 @@ public class Register extends Activity {
 		mMale.setSelected(true);
 		mMale.setOnClickListener(genderListener);
 		mFemale.setOnClickListener(genderListener);
+		
+		Bundle extras = getIntent().getExtras();
+		if(extras != null)
+			isEdit = extras.getBoolean("IS_EDIT");
+		if(isEdit)
+			loadEditData();
 	}
 
 	@Override
@@ -64,7 +74,7 @@ public class Register extends Activity {
 	//set preference for access token
     public void setPref(String key,String value)
     {
-		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERANCE, MODE_PRIVATE);
+		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERENCE, MODE_PRIVATE);
 		SharedPreferences.Editor editor=pref.edit();
 		editor.putString(key, value);
 		editor.commit();
@@ -73,7 +83,7 @@ public class Register extends Activity {
     //set preference for userID
     public void setPref(String key,int value)
     {
-		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERANCE, MODE_PRIVATE);
+		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERENCE, MODE_PRIVATE);
 		SharedPreferences.Editor editor=pref.edit();
 		editor.putInt(key, value);
 		editor.commit();
@@ -133,10 +143,18 @@ public class Register extends Activity {
 			v.setSelected(true);
 		}
 	};
-
-	public void register(View v)
+	
+	public void next(View v)
 	{
-		boolean isMale = mMale.isPressed();
+		if(isEdit)
+			editProfile();
+		else
+			register();
+	}
+
+	protected void register()
+	{
+		isMale = mMale.isPressed();
 		int month = mDate.getMonth();
 		int day = mDate.getDayOfMonth();
 		int year = mDate.getYear();
@@ -166,6 +184,10 @@ public class Register extends Activity {
 					if(Util.validateStr(response.data.accessToken) && response.data.userID!=0){
 						setPref(PApp.Pref_AccessToken,response.data.accessToken);
 						setPref(PApp.Pref_UserID,response.data.userID);
+						setPref(PApp.Pref_User_Profile_name, response.data.profileName);
+						setPref(PApp.Pref_User_Email, response.data.email);
+						setPref(PApp.Pref_User_BDate, response.data.birthData);
+						setPref(PApp.Pref_User_gender, response.data.gender);
 						startActivity(new Intent(Register.this, Dashboard.class));
 						finish();
 					}else{
@@ -182,6 +204,121 @@ public class Register extends Activity {
 			}
 		});
 		asyncCall.execute();
+	}
+	
+	protected void editProfile()
+	{
+		int month = mDate.getMonth();
+		int day = mDate.getDayOfMonth();
+		int year = mDate.getYear();
+		dateString = year + "-" + month + "-" + day;
+		
+		asyncCall=new AsyncCall(this);
+		asyncCall.setUrl(PApp.WEB_SERVICE_URL+"updateloggedinuser");
+		asyncCall.setMessage(getString(R.string.progress_title_updating_profile));
+		asyncCall.isTouploadFile=true;
+//		if(Util.validateStr(imageFile)){
+//			asyncCall.addFile("file_0", new File(imageFile));	
+//		}
+		asyncCall.addParam("user_id", ""+getIntPref(PApp.Pref_UserID));
+		asyncCall.addParam("profile_name", mName.getText().toString());
+		/*asyncCall.addParam("email", email_edxt.getText().toString());*/
+		if(Util.validateStr(mPassword.getText().toString())){
+			asyncCall.addParam("old_password", mPassword.getText().toString());
+			asyncCall.addParam("password", mPasswordConf.getText().toString());
+		}
+		asyncCall.addParam("birth_date", dateString);
+		asyncCall.addParam("access_token", getStrPref(PApp.Pref_AccessToken));
+		
+		if(isMale){
+			asyncCall.addParam("gender", "M");
+		}else{
+			asyncCall.addParam("gender", "F");
+		}
+		asyncCall.setAsyncCallListener(new AsyncCallListener()
+		{
+			PApp app = (PApp) getApplication();
+			@Override
+			public void onResponseReceived(String str) {
+				infoLog("UpdateUser Response:"+str);
+				try{
+					Gson gson=new Gson();
+					LoginParser response=gson.fromJson(str, LoginParser.class);
+					if(Util.validateStr(response.data.accessToken) && response.data.userID!=0)
+					{
+						setPref(PApp.Pref_User_Profile_name, response.data.profileName);
+						setPref(PApp.Pref_User_Email, response.data.email);
+						setPref(PApp.Pref_User_BDate, response.data.birthData);
+						setPref(PApp.Pref_User_gender, response.data.gender);
+						if(Util.validateStr(response.data.photoUrl)){
+							setPref(PApp.Pref_User_photoUrl,response.data.photoUrl);
+						}
+//						showSuccessDialog(R.drawable.item_updated, R.drawable.msg_profile_updated);
+						Intent intent=new Intent(PApp.ACTION_GET_ALL_DETAIL);
+						sendBroadcast(intent);
+						app.isRefresUserData=true;
+						finish();	
+					}else{
+						showErrorMessage(response.errorMsg, getString(R.string.dialog_title));
+					}
+				}catch(Exception e){
+					infoError("", e);
+				}
+				
+			}
+			@Override
+			public void onErrorReceived(String str) {
+				showErrorMessage(str, getString(R.string.dialog_title));
+				
+			}
+		});
+		asyncCall.execute();
+	}
+	
+	protected void loadEditData()
+	{
+		PApp app = (PApp) this.getApplication();
+		
+		setTitle(getString(R.string.update_profile));
+		((Button)findViewById(R.id.btnRegister)).setText(getString(R.string.btn_save));
+		mPassword.setVisibility(View.VISIBLE);
+		mPasswordConf.setVisibility(View.VISIBLE);
+		mPassword.setHint(getString(R.string.password));
+		if(Util.validateStr(getStrPref(PApp.Pref_User_Profile_name))){
+			mName.setText(getStrPref(PApp.Pref_User_Profile_name));
+		}
+		if(Util.validateStr(getStrPref(PApp.Pref_User_Email))){
+			mEmail.setText(getStrPref(PApp.Pref_User_Email));
+		}
+		if(Util.validateStr(getStrPref(PApp.Pref_User_gender))){
+			String str=getStrPref(PApp.Pref_User_gender);
+			if(str.equalsIgnoreCase("M")){
+				isMale=true;
+				mMale.setSelected(true);
+				mFemale.setSelected(false);
+				
+			}else if(str.equalsIgnoreCase("F")){
+				isMale=false;
+				mMale.setSelected(false);
+				mFemale.setSelected(true);
+			}
+			
+		}
+		
+		if(Util.validateStr(getStrPref(PApp.Pref_User_BDate)))
+		{
+			dateString = getStrPref(PApp.Pref_User_BDate);
+			System.out.println("DATE STRING: " + dateString);
+			SimpleDateFormat dispFormat=new SimpleDateFormat("yyyy-MM-dd");
+			Calendar date = Calendar.getInstance();
+			try
+			{
+				date.setTime(dispFormat.parse(dateString));
+				mDate.updateDate(date.get(Calendar.YEAR), date.get(Calendar.MONTH), date.get(Calendar.DAY_OF_MONTH));
+			} catch (java.text.ParseException e)
+			{
+			}
+		}
 	}
 	
 	private boolean validate()
@@ -212,13 +349,13 @@ public class Register extends Activity {
 			Toast.makeText(this, getString(R.string.validate_bday_msg), Toast.LENGTH_SHORT).show();
 			return false;
 		}
-		SimpleDateFormat dispFormate=new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat dispFormat=new SimpleDateFormat("yyyy-MM-dd");
 		if(Util.validateStr(dateString))
 		{
 			Date date;
 			try
 			{
-				date = dispFormate.parse(dateString);
+				date = dispFormat.parse(dateString);
 				Date curDate=new Date();
 				if(date.getTime()>curDate.getTime())
 				{
@@ -231,6 +368,19 @@ public class Register extends Activity {
 		}
 		return true;
 	}
+	
+	public String getStrPref(String key)
+	{
+		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERENCE, MODE_PRIVATE);
+		return pref.getString(key, "");
+	}
+	
+	public int getIntPref(String key)
+	{
+		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERENCE, MODE_PRIVATE);
+		return pref.getInt(key, 0);
+	}
+	
 	
 	public void login(View v)
 	{
