@@ -39,6 +39,7 @@
     <string name="user_agreement">User Agreement</string>
     <string name="riskassessment">Risk Assessment</string>
     <string name="register_now">New? Click to register</string>
+    <string name="register_accept">By registering, you agree to these terms and conditions.</string>
     
 	<string name="dlg_from_camera">Capture Image</string>
 	<string name="dlg_cancel">Cancel</string>
@@ -79,6 +80,26 @@
 	<string name="update_profile">Edit Profile</string>
 	<string name="progress_title_updating_profile">Updating profile. Please wait...</string>
 	<string name="btn_save">Save</string>
+	
+	<string-array name="accordion_braden_sections">
+        <item>Sensory Perception</item>
+        <item>Moisture</item>
+        <item>Activity</item>
+        <item>Mobility</item>
+        <item>Nutrition</item>
+        <item>Friction</item>
+        <item>Oxygenation</item>
+    </string-array>
+
+    <integer-array name="accordion_braden_visibility">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
 	
 	<string-array name="accordion_sections">
         <item>Section A</item>

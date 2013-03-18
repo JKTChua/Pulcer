@@ -41,7 +41,13 @@ public class Settings extends Activity
 	
 	public void terms(View v)
 	{
-		
+		startActivity(new Intent(Settings.this, UserAgreement.class));
+	}
+	
+	public void back(View v)
+	{
+		finish();
+		overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
 	}
 
 }

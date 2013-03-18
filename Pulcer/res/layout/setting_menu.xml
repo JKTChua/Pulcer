@@ -7,7 +7,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/com.example.pulcer">
     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/setting_title_bg">
-        <com.me.pulcer.component.PButton android:id="@+id/setting_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginLeft="10dp" android:background="@drawable/black_backbtn_selector" android:text="@string/back" android:textColor="@color/White" android:textSize="16dp"/>
+
+        <com.me.pulcer.component.PButton
+            android:id="@+id/setting_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/black_backbtn_selector"
+            android:onClick="back"
+            android:text="@string/back"
+            android:textColor="@color/White"
+            android:textSize="16dp" />
+
         <com.me.pulcer.component.PTextView android:id="@+id/pTextView2" style="@style/Text.White.Medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:text="@string/setting_title" android:textAppearance="?android:attr/textAppearanceMedium"/>
     </RelativeLayout>
     <LinearLayout android:id="@+id/settings_options" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
@@ -23,7 +35,17 @@
             app:font_file="FS Joey-Medium.otf" />
 
         <com.me.pulcer.component.PTextView android:id="@+id/opt_alerts" style="@style/Setting_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/setting_row_selector" app:font_file="FS Joey-Medium.otf" android:text="@string/setting_alerts"/>
-        <com.me.pulcer.component.PTextView android:id="@+id/opt_terms" style="@style/Setting_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/setting_row_selector" app:font_file="FS Joey-Medium.otf" android:text="@string/setting_terms"/>
+
+        <com.me.pulcer.component.PTextView
+            android:id="@+id/opt_terms"
+            style="@style/Setting_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_row_selector"
+            android:onClick="terms"
+            android:text="@string/setting_terms"
+            app:font_file="FS Joey-Medium.otf" />
+
         <com.me.pulcer.component.PTextView android:id="@+id/opt_privacy" style="@style/Setting_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/setting_row_selector" app:font_file="FS Joey-Medium.otf" android:text="@string/setting_privacy"/>
 
         <com.me.pulcer.component.PTextView

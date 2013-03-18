@@ -142,7 +142,6 @@ public class Login extends Activity
 						setPref(PApp.Pref_UserID,response.data.userID);
 						setUserData(response);
 						startActivity(new Intent(Login.this, Dashboard.class));
-						finish();
 					}
 					else
 					{
@@ -169,7 +168,6 @@ public class Login extends Activity
 	{
 		startActivity(new Intent(Login.this, Register.class));
 		overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
-		finish();
 	}
 	
 	private void setUserData(LoginParser response)

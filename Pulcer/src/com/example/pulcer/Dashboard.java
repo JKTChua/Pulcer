@@ -69,11 +69,17 @@ public class Dashboard extends Activity
 	public void openSettings(View v)
 	{
 		startActivity(new Intent(Dashboard.this, Settings.class));
+		overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
 	}
 	
 	public void newUlcer(View v)
 	{
 		startActivity(new Intent(Dashboard.this, Survey.class));
+	}
+	
+	public void braden(View v)
+	{
+		startActivity(new Intent(Dashboard.this, Survey.class).putExtra("IS_BRADEN", true));
 	}
 	
 	protected void loadFromDb()

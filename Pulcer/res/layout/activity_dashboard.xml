@@ -34,6 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvRiskAssessment"
         android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="braden"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -54,6 +56,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="14dp"
         android:layout_toRightOf="@+id/btnSettings"
+        android:clickable="true"
+        android:onClick="braden"
         android:text="@string/riskassessment"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

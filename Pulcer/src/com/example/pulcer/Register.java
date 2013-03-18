@@ -381,11 +381,10 @@ public class Register extends Activity {
 		return pref.getInt(key, 0);
 	}
 	
-	
-	public void login(View v)
+	public void back(View v)
 	{
-		startActivity(new Intent(Register.this, Login.class));
 		finish();
+		overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
 	}
 	
 	public void agreement(View v)

@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:onClick="login"
+        android:onClick="back"
         android:text="@string/back" />
 
     <EditText
@@ -98,5 +98,17 @@
         android:layout_alignBottom="@+id/btnMale"
         android:layout_toRightOf="@+id/btnMale"
         android:text="@string/female" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnMale"
+        android:layout_alignTop="@+id/btnRegister"
+        android:layout_toLeftOf="@+id/btnRegister"
+        android:gravity="center_horizontal"
+        android:clickable="true"
+        android:onClick="agreement"
+        android:text="@string/register_accept" />
 
 </RelativeLayout>
