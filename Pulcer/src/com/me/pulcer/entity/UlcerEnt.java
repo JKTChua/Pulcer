@@ -33,7 +33,7 @@ public class UlcerEnt implements Serializable
 	*/
 	@SerializedName("stage")
 	@Column(name="stage")
-	public byte stage;
+	public int stage;
 	
 	/**
 	0 left
@@ -42,7 +42,7 @@ public class UlcerEnt implements Serializable
 	*/
 	@SerializedName("healing_status")
 	@Column(name="healing_status")
-	public byte healingStatus;
+	public int healingStatus;
 	
 	/**
 	0 bone
@@ -56,7 +56,7 @@ public class UlcerEnt implements Serializable
 	*/
 	@SerializedName("internal")
 	@Column(name="internal")
-	public byte internal;
+	public int internal;
 	
 	@SerializedName("image")
 	@Column(name="image")

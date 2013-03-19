@@ -68,7 +68,8 @@ public class Dashboard extends Activity
 	
 	public void openSettings(View v)
 	{
-		startActivity(new Intent(Dashboard.this, Settings.class));
+//		startActivity(new Intent(Dashboard.this, Settings.class));
+		startActivity(new Intent(Dashboard.this, Ulcer.class));
 	}
 	
 	public void newUlcer(View v)

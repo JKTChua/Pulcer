@@ -95,5 +95,20 @@
         <item>0</item>
         <item>0</item>
     </integer-array>
+    
+    <string-array name="ulcer_accordion_sections">
+        <item>Stage Info</item>
+        <item>Healing Status</item>
+        <item>Visible Internal Structures</item>
+        <item>Location</item>
+        <item>Device-Related</item>
+    </string-array>
 
+    <integer-array name="ulcer_accordion_visibility">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
 </resources>
