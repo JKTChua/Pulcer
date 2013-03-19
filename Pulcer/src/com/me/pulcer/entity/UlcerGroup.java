@@ -20,7 +20,7 @@ public class UlcerGroup implements Serializable
 	public int groupId;
 	
 	@SerializedName("user_id")
-	@Column(name="user_id")
+	@Column(primary=true,name="user_id")
 	public int userId;
 	
 	/**
@@ -45,7 +45,7 @@ public class UlcerGroup implements Serializable
 	*/
 	@SerializedName("location")
 	@Column(name="location")
-	public byte location;
+	public int location;
 	
 	/**
 	1 
@@ -56,7 +56,7 @@ public class UlcerGroup implements Serializable
 	*/
 	@SerializedName("stage")
 	@Column(name="stage")
-	public byte stage;
+	public int stage;
 	
 	/**
 	false device-related
@@ -83,13 +83,13 @@ public class UlcerGroup implements Serializable
 	*/
 	@SerializedName("location_qualifier")
 	@Column(name="location_qualifier")
-	public byte locationQualifier;
+	public int locationQualifier;
 	
 	@SerializedName("image")
 	@Column(name="image")
 	public String image;
     
-    public static String locationToString(byte loc)
+    public static String locationToString(int loc)
     {
         switch (loc)
         {

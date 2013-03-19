@@ -177,10 +177,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int white_btn_selector=0x7f020029;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0b0056;
-        public static final int RelativeLayout1=0x7f0b005a;
+        public static final int LinearLayout1=0x7f0b0054;
+        public static final int RelativeLayout1=0x7f0b0058;
         public static final int accordion_view=0x7f0b0021;
-        public static final int action_settings=0x7f0b005c;
+        public static final int action_settings=0x7f0b005a;
         public static final int activity1=0x7f0b002d;
         public static final int activity2=0x7f0b002e;
         public static final int activity3=0x7f0b002f;
@@ -214,7 +214,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int lblStage=0x7f0b001d;
         public static final int lvUlcers=0x7f0b0009;
         public static final int mainlayout=0x7f0b0000;
-        public static final int menu_settings=0x7f0b005b;
+        public static final int menu_settings=0x7f0b0059;
         public static final int mobility1=0x7f0b0032;
         public static final int mobility2=0x7f0b0033;
         public static final int mobility3=0x7f0b0034;
@@ -227,11 +227,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int nutrition2=0x7f0b0038;
         public static final int nutrition3=0x7f0b0039;
         public static final int nutrition4=0x7f0b003a;
-        public static final int opt_alerts=0x7f0b0052;
         public static final int opt_edit_profile=0x7f0b0051;
-        public static final int opt_logout=0x7f0b0055;
-        public static final int opt_privacy=0x7f0b0054;
-        public static final int opt_terms=0x7f0b0053;
+        public static final int opt_logout=0x7f0b0053;
+        public static final int opt_terms=0x7f0b0052;
         public static final int oxygenation1=0x7f0b0041;
         public static final int oxygenation2=0x7f0b0042;
         public static final int oxygenation3=0x7f0b0043;
@@ -267,9 +265,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int txtRegisterEmail=0x7f0b0011;
         public static final int txtRegisterPassword=0x7f0b0012;
         public static final int txtRegisterPasswordConfirm=0x7f0b0013;
-        public static final int ulcer_imgvw=0x7f0b0057;
-        public static final int ulcer_location=0x7f0b0058;
-        public static final int ulcer_stage=0x7f0b0059;
+        public static final int ulcer_imgvw=0x7f0b0055;
+        public static final int ulcer_location=0x7f0b0056;
+        public static final int ulcer_stage=0x7f0b0057;
     }
     public static final class layout {
         public static final int accordion_footer=0x7f030000;

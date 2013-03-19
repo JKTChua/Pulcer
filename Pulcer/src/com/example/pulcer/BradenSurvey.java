@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.me.pulcer.common.PApp;
 import com.me.pulcer.entity.Braden;
 import com.me.pulcer.widget.AccordionView;
 import com.the9tcat.hadi.DefaultDAO;
@@ -186,26 +188,16 @@ public class BradenSurvey extends Activity
 			if(((RadioButton)oxygenation.getChildAt(x)).isChecked())
 				survey.oxygenation = (byte) (x+1);
 		}
-//		int total = 0;
-//		if(survey.moisture != 0)
-//			total += 4;
-//		if(survey.activity != 0)
-//			total += 4;
-//		if(survey.mobility != 0)
-//			total += 4;
-//		if(survey.nutrition != 0)
-//			total += 4;
-//		if(survey.friction != 0)
-//			total += 4;
-//		if(survey.sensoryPerception != 0)
-//			total += 4;
-//		if(survey.oxygenation != 0)
-//			total += 4;
+		
 		survey.riskTotal = (byte) (survey.moisture + survey.activity + survey.mobility + survey.nutrition + survey.friction + survey.sensoryPerception + survey.oxygenation);
 		
 		Calendar c = Calendar.getInstance();
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		survey.date = df.format(c.getTime());
+		
+		SharedPreferences pref = getSharedPreferences(PApp.PLUS_PREFERENCE, MODE_PRIVATE);
+		
+		survey.userId = pref.getInt(PApp.Pref_UserID, 0);
 		
 		DefaultDAO dao = new DefaultDAO(BradenSurvey.this);
 		dao.insert(survey);

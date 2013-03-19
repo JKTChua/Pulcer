@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 public class PLogger {
 	
-	public static final String logTag="Plus";
+	public static final String logTag="Pulcer";
 	
 	public static Logger getLogger(){
 		 return Logger.getLogger(logTag);
