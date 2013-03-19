@@ -52,6 +52,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
+        public static final int header_layout_subtext_id=0x7f01000e;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
         public static final int icon_label=0x7f010003;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -173,10 +177,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int white_btn_selector=0x7f020029;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0b0032;
-        public static final int RelativeLayout1=0x7f0b0036;
+        public static final int LinearLayout1=0x7f0b0056;
+        public static final int RelativeLayout1=0x7f0b005a;
         public static final int accordion_view=0x7f0b0021;
-        public static final int action_settings=0x7f0b0038;
+        public static final int action_settings=0x7f0b005c;
+        public static final int activity1=0x7f0b002d;
+        public static final int activity2=0x7f0b002e;
+        public static final int activity3=0x7f0b002f;
+        public static final int activity4=0x7f0b0030;
         public static final int btnAccept=0x7f0b0020;
         public static final int btnAddDate=0x7f0b001b;
         public static final int btnAddUlcer=0x7f0b0006;
@@ -188,35 +196,67 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int btnSettings=0x7f0b0005;
         public static final int btnUlcerBack=0x7f0b0018;
         public static final int dateDob=0x7f0b0014;
-        public static final int dlg_cancel=0x7f0b0028;
-        public static final int editText1=0x7f0b0024;
+        public static final int dlg_cancel=0x7f0b0048;
+        public static final int editText1=0x7f0b004b;
         public static final int edit_message=0x7f0b001c;
-        public static final int example_get_by_id=0x7f0b0022;
+        public static final int example_get_by_id=0x7f0b0049;
         public static final int foldButton=0x7f0b0001;
         public static final int foldSubtext=0x7f0b0003;
         public static final int foldText=0x7f0b0002;
-        public static final int from_cam_btn=0x7f0b0027;
-        public static final int from_gallery_btn=0x7f0b0026;
+        public static final int friction1=0x7f0b003c;
+        public static final int friction2=0x7f0b003d;
+        public static final int friction3=0x7f0b003e;
+        public static final int friction4=0x7f0b003f;
+        public static final int from_cam_btn=0x7f0b0047;
+        public static final int from_gallery_btn=0x7f0b0046;
         public static final int gallery1=0x7f0b001e;
         public static final int lblAgreement=0x7f0b0019;
         public static final int lblStage=0x7f0b001d;
         public static final int lvUlcers=0x7f0b0009;
         public static final int mainlayout=0x7f0b0000;
-        public static final int menu_settings=0x7f0b0037;
-        public static final int opt_alerts=0x7f0b002e;
-        public static final int opt_edit_profile=0x7f0b002d;
-        public static final int opt_logout=0x7f0b0031;
-        public static final int opt_privacy=0x7f0b0030;
-        public static final int opt_terms=0x7f0b002f;
-        public static final int pTextView2=0x7f0b002b;
-        public static final int ratingBar1=0x7f0b0023;
+        public static final int menu_settings=0x7f0b005b;
+        public static final int mobility1=0x7f0b0032;
+        public static final int mobility2=0x7f0b0033;
+        public static final int mobility3=0x7f0b0034;
+        public static final int mobility4=0x7f0b0035;
+        public static final int moisture1=0x7f0b0028;
+        public static final int moisture2=0x7f0b0029;
+        public static final int moisture3=0x7f0b002a;
+        public static final int moisture4=0x7f0b002b;
+        public static final int nutrition1=0x7f0b0037;
+        public static final int nutrition2=0x7f0b0038;
+        public static final int nutrition3=0x7f0b0039;
+        public static final int nutrition4=0x7f0b003a;
+        public static final int opt_alerts=0x7f0b0052;
+        public static final int opt_edit_profile=0x7f0b0051;
+        public static final int opt_logout=0x7f0b0055;
+        public static final int opt_privacy=0x7f0b0054;
+        public static final int opt_terms=0x7f0b0053;
+        public static final int oxygenation1=0x7f0b0041;
+        public static final int oxygenation2=0x7f0b0042;
+        public static final int oxygenation3=0x7f0b0043;
+        public static final int oxygenation4=0x7f0b0044;
+        public static final int pTextView2=0x7f0b004f;
+        public static final int radioActivity=0x7f0b002c;
+        public static final int radioFriction=0x7f0b003b;
+        public static final int radioMobility=0x7f0b0031;
+        public static final int radioMoisture=0x7f0b0027;
+        public static final int radioNutrition=0x7f0b0036;
+        public static final int radioOxygenation=0x7f0b0040;
+        public static final int radioSensory=0x7f0b0022;
+        public static final int ratingBar1=0x7f0b004a;
         public static final int section_content=0x7f0b0004;
-        public static final int seekBar1=0x7f0b0025;
-        public static final int setting_back=0x7f0b002a;
-        public static final int setting_root=0x7f0b0029;
-        public static final int settings_options=0x7f0b002c;
-        public static final int textView1=0x7f0b0017;
+        public static final int seekBar1=0x7f0b004c;
+        public static final int sensory1=0x7f0b0023;
+        public static final int sensory2=0x7f0b0024;
+        public static final int sensory3=0x7f0b0025;
+        public static final int sensory4=0x7f0b0026;
+        public static final int setting_back=0x7f0b004e;
+        public static final int setting_root=0x7f0b004d;
+        public static final int settings_options=0x7f0b0050;
+        public static final int submitBraden=0x7f0b0045;
         public static final int textView2=0x7f0b001a;
+        public static final int tvAgreement=0x7f0b0017;
         public static final int tvRegister=0x7f0b000d;
         public static final int tvRiskAssessment=0x7f0b0008;
         public static final int tvRiskResult=0x7f0b0007;
@@ -227,9 +267,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int txtRegisterEmail=0x7f0b0011;
         public static final int txtRegisterPassword=0x7f0b0012;
         public static final int txtRegisterPasswordConfirm=0x7f0b0013;
-        public static final int ulcer_imgvw=0x7f0b0033;
-        public static final int ulcer_location=0x7f0b0034;
-        public static final int ulcer_stage=0x7f0b0035;
+        public static final int ulcer_imgvw=0x7f0b0057;
+        public static final int ulcer_location=0x7f0b0058;
+        public static final int ulcer_stage=0x7f0b0059;
     }
     public static final class layout {
         public static final int accordion_footer=0x7f030000;
@@ -265,9 +305,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class string {
         public static final int accept=0x7f070021;
         public static final int action_settings=0x7f070005;
+        public static final int activity1=0x7f070041;
+        public static final int activity2=0x7f070042;
+        public static final int activity3=0x7f070043;
+        public static final int activity4=0x7f070044;
         public static final int app_name=0x7f070000;
         public static final int back=0x7f07000a;
-        public static final int btn_save=0x7f070037;
+        public static final int btn_save=0x7f070038;
         public static final int confirmPassword=0x7f07002d;
         public static final int decline=0x7f070022;
         public static final int dialog_title=0x7f07001c;
@@ -276,24 +320,49 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int dlg_from_gallery=0x7f070029;
         public static final int email=0x7f07002c;
         public static final int female=0x7f07000e;
+        public static final int friction1=0x7f07004d;
+        public static final int friction2=0x7f07004e;
+        public static final int friction3=0x7f07004f;
+        public static final int friction4=0x7f070050;
         public static final int hello_world=0x7f070001;
         public static final int login=0x7f07000b;
         public static final int male=0x7f07000d;
         public static final int menu_settings=0x7f070002;
+        public static final int mobility1=0x7f070045;
+        public static final int mobility2=0x7f070046;
+        public static final int mobility3=0x7f070047;
+        public static final int mobility4=0x7f070048;
+        public static final int moisture1=0x7f07003d;
+        public static final int moisture2=0x7f07003e;
+        public static final int moisture3=0x7f07003f;
+        public static final int moisture4=0x7f070040;
         public static final int name=0x7f07002a;
+        public static final int nutrition1=0x7f070049;
+        public static final int nutrition2=0x7f07004a;
+        public static final int nutrition3=0x7f07004b;
+        public static final int nutrition4=0x7f07004c;
         public static final int okay=0x7f07002e;
+        public static final int oxygenation1=0x7f070051;
+        public static final int oxygenation2=0x7f070052;
+        public static final int oxygenation3=0x7f070053;
+        public static final int oxygenation4=0x7f070054;
         public static final int password=0x7f07002b;
-        public static final int progress_title_updating_profile=0x7f070036;
+        public static final int progress_title_updating_profile=0x7f070037;
         public static final int register=0x7f07000c;
         public static final int register_accept=0x7f070026;
         public static final int register_now=0x7f070025;
         public static final int riskassessment=0x7f070024;
-        public static final int setting_alerts=0x7f070031;
-        public static final int setting_edit_profile=0x7f070030;
-        public static final int setting_logout=0x7f07002f;
-        public static final int setting_privacy=0x7f070033;
-        public static final int setting_terms=0x7f070032;
-        public static final int setting_title=0x7f070034;
+        public static final int sensory1=0x7f070039;
+        public static final int sensory2=0x7f07003a;
+        public static final int sensory3=0x7f07003b;
+        public static final int sensory4=0x7f07003c;
+        public static final int setting_alerts=0x7f070032;
+        public static final int setting_edit_profile=0x7f070031;
+        public static final int setting_logout=0x7f070030;
+        public static final int setting_privacy=0x7f070034;
+        public static final int setting_terms=0x7f070033;
+        public static final int setting_title=0x7f070035;
+        public static final int submit=0x7f07002f;
         public static final int title_activity_dashboard=0x7f070008;
         public static final int title_activity_login=0x7f070007;
         public static final int title_activity_main=0x7f070004;
@@ -304,7 +373,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int title_activity_ulcer=0x7f07001f;
         public static final int title_activity_user_list=0x7f070006;
         public static final int title_activity_useragreement=0x7f07001e;
-        public static final int update_profile=0x7f070035;
+        public static final int update_profile=0x7f070036;
         public static final int user_agreement=0x7f070023;
         public static final int validate_bdate_msg=0x7f070019;
         public static final int validate_bday_msg=0x7f070017;
@@ -469,6 +538,7 @@ containing a value of this type.
            <tr><td><code>{@link #accordion_header_layout_fold_button_id com.example.pulcer:header_layout_fold_button_id}</code></td><td></td></tr>
            <tr><td><code>{@link #accordion_header_layout_id com.example.pulcer:header_layout_id}</code></td><td></td></tr>
            <tr><td><code>{@link #accordion_header_layout_label_id com.example.pulcer:header_layout_label_id}</code></td><td></td></tr>
+           <tr><td><code>{@link #accordion_header_layout_subtext_id com.example.pulcer:header_layout_subtext_id}</code></td><td></td></tr>
            <tr><td><code>{@link #accordion_section_bottom com.example.pulcer:section_bottom}</code></td><td></td></tr>
            <tr><td><code>{@link #accordion_section_container com.example.pulcer:section_container}</code></td><td></td></tr>
            <tr><td><code>{@link #accordion_section_container_parent com.example.pulcer:section_container_parent}</code></td><td></td></tr>
@@ -479,6 +549,7 @@ containing a value of this type.
            @see #accordion_header_layout_fold_button_id
            @see #accordion_header_layout_id
            @see #accordion_header_layout_label_id
+           @see #accordion_header_layout_subtext_id
            @see #accordion_section_bottom
            @see #accordion_section_container
            @see #accordion_section_container_parent
@@ -488,7 +559,7 @@ containing a value of this type.
         public static final int[] accordion = {
             0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008,
             0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c,
-            0x7f01000d
+            0x7f01000d, 0x7f01000e
         };
         /**
           <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#custom_font}
@@ -534,6 +605,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name android:header_layout_label_id
         */
         public static final int accordion_header_layout_label_id = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#header_layout_subtext_id}
+          attribute's value can be found in the {@link #accordion} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:header_layout_subtext_id
+        */
+        public static final int accordion_header_layout_subtext_id = 9;
         /**
           <p>This symbol is the offset where the {@link com.example.pulcer.R.attr#section_bottom}
           attribute's value can be found in the {@link #accordion} array.

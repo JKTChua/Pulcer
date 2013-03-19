@@ -38,6 +38,14 @@ public class Dashboard extends Activity
 		loadFromDb();
 		updateRisk();
 	}
+	
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+		loadFromDb();
+		updateRisk();
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
@@ -74,21 +82,28 @@ public class Dashboard extends Activity
 	
 	public void newUlcer(View v)
 	{
-		startActivity(new Intent(Dashboard.this, Survey.class));
+		startActivity(new Intent(Dashboard.this, BradenSurvey.class));
 	}
 	
 	public void braden(View v)
 	{
-		startActivity(new Intent(Dashboard.this, Survey.class).putExtra("IS_BRADEN", true));
+		if(bradenListData.size() == 0)
+			startActivity(new Intent(Dashboard.this, BradenSurvey.class));
+		else
+		{
+			Intent i = new Intent(Dashboard.this, BradenSurvey.class);
+			i.putExtra("Braden", bradenListData.get(bradenListData.size()-1));
+			startActivity(i);
+		}
 	}
 	
 	protected void loadFromDb()
 	{
-		DefaultDAO dao = new DefaultDAO(this);
+		DefaultDAO dao = new DefaultDAO(Dashboard.this);
 		String args[]={""+0};
 		try{
-			ulcerListData = (ArrayList<UlcerGroup>) dao.select(UlcerEnt.class, false, "id>", args, null, null, null, null);
-			bradenListData = (ArrayList<Braden>) dao.select(Braden.class, false, "id>", args, null, null, null, null);
+			ulcerListData = (ArrayList<UlcerGroup>) dao.select(UlcerEnt.class, false, null, null, null, null, null, null);
+			bradenListData = (ArrayList<Braden>) dao.select(Braden.class, false, null, null, null, null, null, null);
 			adapter = new UlcerAdapter(this, ulcerListData);
 			
 		}catch(Exception e){

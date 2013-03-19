@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 import com.the9tcat.hadi.annotation.Column;
 import com.the9tcat.hadi.annotation.Table;
 
-@Table(name="ulcerent")
+@Table(name="braden")
 public class Braden implements Serializable
 {
 
@@ -32,7 +32,7 @@ public class Braden implements Serializable
 	 */
 	@SerializedName("sensory_perception")
 	@Column(name="sensory_perception")
-	public byte sensoryPerception;
+	public int sensoryPerception;
 	
 	/**
 	Constantly Moist = 1
@@ -42,7 +42,7 @@ public class Braden implements Serializable
 	 */
 	@SerializedName("moisture")
 	@Column(name="moisture")
-	public byte moisture;
+	public int moisture;
 	
 	/**
 	Bedfast = 1
@@ -52,7 +52,7 @@ public class Braden implements Serializable
 	 */
 	@SerializedName("activity")
 	@Column(name="activity")
-	public byte activity;
+	public int activity;
 
 	/**
 	Completely Immobile = 1
@@ -62,7 +62,7 @@ public class Braden implements Serializable
 	 */
 	@SerializedName("mobility")
 	@Column(name="mobility")
-	public byte mobility;
+	public int mobility;
 	
 	/**
 	Very Poor = 1
@@ -72,7 +72,7 @@ public class Braden implements Serializable
 	 */
 	@SerializedName("nutrition")
 	@Column(name="nutrition")
-	public byte nutrition;
+	public int nutrition;
 	
 	/**
 	Significant Problem = 1
@@ -82,7 +82,7 @@ public class Braden implements Serializable
 	 */
 	@SerializedName("friction")
 	@Column(name="friction")
-	public byte friction;
+	public int friction;
 	
 	/**
 	Extremely Compromised = 1
@@ -92,7 +92,7 @@ public class Braden implements Serializable
 	 */
 	@SerializedName("oxygenation")
 	@Column(name="oxygenation")
-	public byte oxygenation;
+	public int oxygenation;
 	
 	/**
 	No Risk = 19 or higher
@@ -103,7 +103,7 @@ public class Braden implements Serializable
 	*/
 	@SerializedName("risk_total")
 	@Column(name="risk_total")
-	public byte riskTotal;
+	public int riskTotal;
 	
 	
 	/**

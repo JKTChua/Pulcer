@@ -8,7 +8,7 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="400dp" >
 
         <com.me.pulcer.widget.AccordionView
             android:id="@+id/accordion_view"
@@ -17,6 +17,7 @@
             accordion:header_layout_fold_button_id="@id/foldButton"
             accordion:header_layout_id="@layout/accordion_header_survey"
             accordion:header_layout_label_id="@id/foldText"
+            accordion:header_layout_subtext_id="@id/foldSubtext"
             accordion:section_bottom="@layout/accordion_footer"
             accordion:section_container="@layout/accordion_section"
             accordion:section_container_parent="@id/section_content"
@@ -25,67 +26,259 @@
             android:background="#fff5f5f5"
             android:orientation="vertical" >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Item 1" />
+            <RadioGroup
+		        android:id="@+id/radioSensory"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/sensory1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateSensorySubtext"
+		            android:text="@string/sensory1" />
+		 
+		        <RadioButton
+		            android:id="@+id/sensory2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateSensorySubtext"
+		            android:text="@string/sensory2" />
+		        
+		        <RadioButton
+		            android:id="@+id/sensory3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateSensorySubtext"
+		            android:text="@string/sensory3" />
+		        
+		        <RadioButton
+		            android:id="@+id/sensory4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateSensorySubtext"
+		            android:text="@string/sensory4" />
+	 
+	    	</RadioGroup>
 
-            <LinearLayout
-                android:id="@+id/example_get_by_id"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+            <RadioGroup
+		        android:id="@+id/radioMoisture"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/moisture1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMoistureSubtext"
+		            android:text="@string/moisture1" />
+		 
+		        <RadioButton
+		            android:id="@+id/moisture2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMoistureSubtext"
+		            android:text="@string/moisture2" />
+		        
+		        <RadioButton
+		            android:id="@+id/moisture3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMoistureSubtext"
+		            android:text="@string/moisture3" />
+		        
+		        <RadioButton
+		            android:id="@+id/moisture4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMoistureSubtext"
+		            android:text="@string/moisture4" />
+	 
+	    	</RadioGroup>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Item 2" />
+            <RadioGroup
+		        android:id="@+id/radioActivity"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/activity1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/activity1" />
+		 
+		        <RadioButton
+		            android:id="@+id/activity2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/activity2" />
+		        
+		        <RadioButton
+		            android:id="@+id/activity3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/activity3" />
+		        
+		        <RadioButton
+		            android:id="@+id/activity4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/activity4" />
+	 
+	    	</RadioGroup>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Item 3" />
-            </LinearLayout>
+            <RadioGroup
+		        android:id="@+id/radioMobility"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/mobility1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMobilitySubtext"
+		            android:text="@string/mobility1" />
+		 
+		        <RadioButton
+		            android:id="@+id/mobility2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMobilitySubtext"
+		            android:text="@string/mobility2" />
+		        
+		        <RadioButton
+		            android:id="@+id/mobility3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMobilitySubtext"
+		            android:text="@string/mobility3" />
+		        
+		        <RadioButton
+		            android:id="@+id/mobility4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMobilitySubtext"
+		            android:text="@string/mobility4" />
+	 
+	    	</RadioGroup>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Item 4" />
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <RatingBar
-                    android:id="@+id/ratingBar1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <EditText
-                    android:id="@+id/editText1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <SeekBar
-                    android:id="@+id/seekBar1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Item 4" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Item 4" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Item 4" />
+            <RadioGroup
+		        android:id="@+id/radioNutrition"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/nutrition1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateNutritionSubtext"
+		            android:text="@string/nutrition1" />
+		 
+		        <RadioButton
+		            android:id="@+id/nutrition2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateNutritionSubtext"
+		            android:text="@string/nutrition2" />
+		        
+		        <RadioButton
+		            android:id="@+id/nutrition3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateNutritionSubtext"
+		            android:text="@string/nutrition3" />
+		        
+		        <RadioButton
+		            android:id="@+id/nutrition4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateNutritionSubtext"
+		            android:text="@string/nutrition4" />
+	 
+	    	</RadioGroup>
+	    	
+            <RadioGroup
+		        android:id="@+id/radioFriction"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/friction1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateFrictionSubtext"
+		            android:text="@string/friction1" />
+		 
+		        <RadioButton
+		            android:id="@+id/friction2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateFrictionSubtext"
+		            android:text="@string/friction2" />
+		        
+		        <RadioButton
+		            android:id="@+id/friction3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateFrictionSubtext"
+		            android:text="@string/friction3" />
+		        
+		        <RadioButton
+		            android:id="@+id/friction4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateFrictionSubtext"
+		            android:text="@string/friction4" />
+	 
+	    	</RadioGroup>
+	    	
+            <RadioGroup
+		        android:id="@+id/radioOxygenation"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/oxygenation1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateOxygenationSubtext"
+		            android:text="@string/oxygenation1" />
+		 
+		        <RadioButton
+		            android:id="@+id/oxygenation2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateOxygenationSubtext"
+		            android:text="@string/oxygenation2" />
+		        
+		        <RadioButton
+		            android:id="@+id/oxygenation3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateOxygenationSubtext"
+		            android:text="@string/oxygenation3" />
+		        
+		        <RadioButton
+		            android:id="@+id/oxygenation4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateOxygenationSubtext"
+		            android:text="@string/oxygenation4" />
+	 
+	    	</RadioGroup>
         </com.me.pulcer.widget.AccordionView>
-    </ScrollView>
+        
+        </ScrollView>
+        
+        <Button
+            android:id="@+id/submitBraden"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:onClick="submitBraden"
+            android:text="@string/submit" />
 
 </LinearLayout>

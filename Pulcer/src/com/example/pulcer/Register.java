@@ -25,6 +25,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Register extends Activity {
@@ -280,6 +281,7 @@ public class Register extends Activity {
 		PApp app = (PApp) this.getApplication();
 		
 		setTitle(getString(R.string.update_profile));
+		((TextView)findViewById(R.id.tvAgreement)).setVisibility(TextView.INVISIBLE);
 		((Button)findViewById(R.id.btnRegister)).setText(getString(R.string.btn_save));
 		mPassword.setVisibility(View.VISIBLE);
 		mPasswordConf.setVisibility(View.VISIBLE);

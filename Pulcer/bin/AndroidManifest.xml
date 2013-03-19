@@ -82,7 +82,7 @@
             android:label="@string/title_activity_ulcer" >
         </activity>
         <activity
-            android:name="com.example.pulcer.Survey"
+            android:name="com.example.pulcer.BradenSurvey"
             android:label="@string/title_activity_survey" >
         </activity>
     </application>

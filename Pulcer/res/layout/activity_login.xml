@@ -26,7 +26,8 @@
         android:layout_toLeftOf="@+id/btnLogin"
         android:ems="10"
         android:hint="@string/email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:text="test@test.com" />
 
     <EditText
         android:id="@+id/txtPassword"
@@ -36,7 +37,8 @@
         android:layout_toLeftOf="@+id/btnLogin"
         android:ems="10"
         android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:text="Test123" />
 
     <TextView
         android:id="@+id/tvRegister"

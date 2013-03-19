@@ -70,6 +70,7 @@
 	<string name="email">Email</string>
 	<string name="confirmPassword">Confirm Password</string>
 	<string name="okay">OK</string>
+	<string name="submit">Submit</string>
 	
 	<string name="setting_logout">Logout</string>
 	<string name="setting_edit_profile">Edit Profile</string>
@@ -81,13 +82,48 @@
 	<string name="progress_title_updating_profile">Updating profile. Please wait...</string>
 	<string name="btn_save">Save</string>
 	
+	<string name="sensory1">Completely Limited</string>
+	<string name="sensory2">Very Limited</string>
+	<string name="sensory3">Slightly Limited</string>
+	<string name="sensory4">No Impairment</string>
+	
+	<string name="moisture1">Constantly Moist</string>
+	<string name="moisture2">Very Moist</string>
+	<string name="moisture3">Occasionally Moist</string>
+	<string name="moisture4">Rarely Moist</string>
+	
+	<string name="activity1">Bedfast</string>
+	<string name="activity2">Chairfast</string>
+	<string name="activity3">Walks Occasionally</string>
+	<string name="activity4">Walks Frequently</string>
+	
+	<string name="mobility1">Completely Immobile</string>
+	<string name="mobility2">Very Limited</string>
+	<string name="mobility3">Slightly Limited</string>
+	<string name="mobility4">No Limitation</string>
+	
+	<string name="nutrition1">Very Poor</string>
+	<string name="nutrition2">Inadequate</string>
+	<string name="nutrition3">Adequate</string>
+	<string name="nutrition4">Excellent</string>
+	
+	<string name="friction1">Significant Problem</string>
+	<string name="friction2">Problem</string>
+	<string name="friction3">Potential Problem</string>
+	<string name="friction4">No Apparent Problem</string>
+	
+	<string name="oxygenation1">Extremely Compromised</string>
+	<string name="oxygenation2">Compromised</string>
+	<string name="oxygenation3">Adequate</string>
+	<string name="oxygenation4">Excellent</string>
+	
 	<string-array name="accordion_braden_sections">
         <item>Sensory Perception</item>
         <item>Moisture</item>
         <item>Activity</item>
         <item>Mobility</item>
         <item>Nutrition</item>
-        <item>Friction</item>
+        <item>Friction and Shear</item>
         <item>Oxygenation</item>
     </string-array>
 
