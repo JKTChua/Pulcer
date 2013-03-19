@@ -51,12 +51,23 @@ public class CameraCap extends Activity
 		{
 			public void onClick(View v) 
 			{
-				Log.d(TAG, "taking picture");
-				preview.camera.takePicture(shutterCallback, rawCallback,
-						jpegCallback);
-				Log.d(TAG, "killing camera");
-				preview.killCamera();
-				Log.d(TAG, "camera killed");
+				try
+				{
+					Log.d(TAG, "taking picture");
+					preview.camera.takePicture(shutterCallback, rawCallback, jpegCallback);
+					Log.d(TAG, "killing camera");
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+					
+				}
+				finally
+				{
+					preview.killCamera();
+					Log.d(TAG, "camera killed");
+				}
+				
 			}
 		});
 
@@ -99,7 +110,7 @@ public class CameraCap extends Activity
 //						"/sdcard/%d.jpg", System.currentTimeMillis()));
 				outStream.write(data);
 				outStream.close();
-				preview.killCamera();
+//				preview.killCamera();
 				Log.d(TAG, "onPictureTaken - wrote bytes: " + data.length);
 			} 
 			catch (FileNotFoundException e) 

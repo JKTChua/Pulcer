@@ -155,6 +155,16 @@ public class Ulcer extends Activity
 			ulcerEnt.internal = 3;
 			ulcerEnt.image = "ulcer-1-1.jpg";
 			ulcerListData.add(ulcerEnt);
+			
+			ulcerEnt = new UlcerEnt();
+			ulcerEnt.date = "3/22/2013";
+			ulcerEnt.groupId = 2;
+			ulcerEnt.healingStatus = 2;
+			ulcerEnt.stage = 1;
+			ulcerEnt.ulcerId = 5;
+			ulcerEnt.internal = 3;
+			ulcerEnt.image = "ulcer-1-1.jpg";
+			ulcerListData.add(ulcerEnt);
 		}
 		adapter = new UlcerGalleryAdapter(this, this, ulcerListData);	
 		gallery.setSpacing(0);

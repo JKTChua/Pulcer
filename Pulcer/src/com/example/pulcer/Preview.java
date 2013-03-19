@@ -115,16 +115,17 @@ class Preview extends SurfaceView implements SurfaceHolder.Callback
 	{
 		if (camera != null)
 		{
-			camera.setPreviewCallback(null);
+			Log.e("Killing", "Killing Camera");
 			camera.stopPreview();
+			camera.setPreviewCallback(null);
 			camera.release();
+			camera = null;
 			Log.e("Camera Killed", "Camera Killed");
-//			camera = null;
 		}
 	}
 	
-	protected void onPause()
-	{
-		killCamera();
-	}
+//	protected void onPause()
+//	{
+//		killCamera();
+//	}
 }
