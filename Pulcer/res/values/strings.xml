@@ -82,6 +82,44 @@
 	<string name="progress_title_updating_profile">Updating profile. Please wait...</string>
 	<string name="btn_save">Save</string>
 	
+	<string name="stage1">Stage 1</string>
+	<string name="stage2">Stage 2</string>
+	<string name="stage3">Stage 3</string>
+	<string name="stage4">Stage 4</string>
+	<string name="stage5">Unstageable</string>
+	
+	<string name="healing0">Healing</string>
+	<string name="healing1">Not Healing</string>
+	<string name="healing2">Healed</string>
+	
+	<string name="internal0">Bone</string>
+	<string name="internal1">Fascia</string>
+	<string name="internal2">Joint Capsule</string>
+	<string name="internal3">Prosthesis</string>
+	<string name="internal4">Pin</string>
+	<string name="internal5">Subcutaneous Tissue</string>
+	<string name="internal6">Tendon</string>
+	<string name="internal7">Muscle</string>
+	
+	<string name="location0">Back of Head</string>
+	<string name="location1">Chin</string>
+	<string name="location2">Shoulder</string>
+	<string name="location3">Scapula</string>
+	<string name="location4">Elbow</string>
+	<string name="location5">Sacrum/Coccyx</string>
+	<string name="location6">Thoracic Spine</string>
+	<string name="location7">Lumbar Spine</string>
+	<string name="location8">Trochanter</string>
+	<string name="location9">Iliac Crest</string>
+	<string name="location10">Buttock</string>
+	<string name="location11">Knee</string>
+	<string name="location12">Heel</string>
+	<string name="location13">Ankle</string>
+	<string name="location14">Ear</string>
+	<string name="location15">Cheek</string>
+	<string name="location16">Nose</string>
+	<string name="location17">Nostril</string>
+	
 	<string name="sensory1">Completely Limited</string>
 	<string name="sensory2">Very Limited</string>
 	<string name="sensory3">Slightly Limited</string>
@@ -137,19 +175,17 @@
         <item>1</item>
     </integer-array>
 	
-	<string-array name="accordion_sections">
-        <item>Section A</item>
-        <item>Section B</item>
-        <item>Section C</item>
-        <item>Section D</item>
-        <item>Section E</item>
+	<string-array name="accordion_ulcer_sections">
+        <item>Stage</item>
+        <item>Healing Status</item>
+        <item>Internal</item>
+        <item>Location</item>
     </string-array>
 
-    <integer-array name="accordion_visibility">
+    <integer-array name="accordion_ulcer_visibility">
         <item>1</item>
         <item>1</item>
-        <item>0</item>
-        <item>0</item>
+        <item>1</item>
         <item>0</item>
     </integer-array>
 
