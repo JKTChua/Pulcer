@@ -35,12 +35,13 @@ public class UlcerGalleryAdapter extends BaseAdapter
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
     
-    public UlcerGalleryAdapter(Activity a, ArrayList<UlcerEnt> ulcerList)
+    public UlcerGalleryAdapter(Activity a, Context c, ArrayList<UlcerEnt> ulcerList)
 	{
     	activity = a;
     	inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 //		inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		this.list = ulcerList;
+		this.context = c;
 	}
     
 //    public UlcerGalleryAdapter(Context context,ArrayList<UlcerEnt> ulcerList)
@@ -100,31 +101,59 @@ public class UlcerGalleryAdapter extends BaseAdapter
             holder = (ViewHolder)vi.getTag();
 //        holder.text.setText(list.get(position).date);
 //        holder.text.setText("Testing");
+        String location = null;
         if (position < list.size())
+        {
         	holder.text.setText(list.get(position).date);
+        	//location = list.get(position).image;
+        	location = list.get(position).ulcerId + "-" + list.get(position).groupId + ".jpg";
+        }
         else
         	holder.text.setText(name[position]);
-        final int stub_id=data[position];
-        holder.image.setImageResource(stub_id);
         
-//        try
-//        {
-////	        File file = new File(Environment.getExternalStorageDirectory() + imageLocations[position]);
-////	        if (file.exists())
-////	        {
-////	        	Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-////	        	holder.image.setImageBitmap(bitmap);
-////	        }
-////	        else
-//        	holder.image.setImageResource(R.drawable.grey_square);
-////	        	holder.image.setImageResource(R.drawable.down);
-//        }
-//        catch (Exception e)
-//        {
-//        	e.printStackTrace();
-//        }
-//        final int stub_id = data[position];
-//        holder.image.setImageResource(stub_id);
+        
+        if (location != null)
+        {
+        	Bitmap bitmap = null;
+        	BitmapFactory.Options options = new BitmapFactory.Options();
+        	options.inSampleSize = 8;
+	        try
+	        {
+	        	File file = new File(context.getExternalFilesDir(null), location);
+		        if (file.exists())
+		        {
+		        	try
+		        	{
+		        		bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
+		        	}
+		        	catch (OutOfMemoryError e)
+		        	{
+		        		System.gc();
+		        		
+		        		try
+		        		{
+		        			bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
+		        		}
+		        		catch(Exception e1)
+		        		{
+		        			e1.printStackTrace();
+		        		}
+		        	}
+		        	holder.image.setImageBitmap(bitmap);
+		        }
+		        else
+		        	holder.image.setImageResource(R.drawable.down);
+	        }
+	        catch (Exception e)
+	        {
+	        	e.printStackTrace();
+	        }
+        }
+        else
+        {
+        	final int stub_id=data[position];
+            holder.image.setImageResource(stub_id);
+        }
         return vi;
     }
 

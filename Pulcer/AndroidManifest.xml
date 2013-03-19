@@ -90,6 +90,12 @@
             android:name="com.example.pulcer.Survey"
             android:label="@string/title_activity_survey" >
         </activity>
+        <activity
+            android:name="com.example.pulcer.CameraCap"
+            android:label="@string/title_activity_survey"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape" >
+        </activity>
     </application>
 
 </manifest>
