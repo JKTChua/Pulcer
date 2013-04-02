@@ -1,7 +1,6 @@
 package com.me.pulcer.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 import com.google.gson.annotations.SerializedName;
 import com.the9tcat.hadi.annotation.Column;

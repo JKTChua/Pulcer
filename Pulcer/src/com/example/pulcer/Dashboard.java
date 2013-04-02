@@ -9,7 +9,6 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,7 +18,6 @@ import android.content.SharedPreferences;
 import com.me.pulcer.adapter.UlcerAdapter;
 import com.me.pulcer.common.PApp;
 import com.me.pulcer.entity.Braden;
-import com.me.pulcer.entity.UlcerEnt;
 import com.me.pulcer.entity.UlcerGroup;
 
 public class Dashboard extends Activity
@@ -84,7 +82,7 @@ public class Dashboard extends Activity
 	
 	public void newUlcer(View v)
 	{
-		startActivity(new Intent(Dashboard.this, BradenSurvey.class));
+		startActivity(new Intent(Dashboard.this, Ulcer.class));
 	}
 	
 	public void braden(View v)

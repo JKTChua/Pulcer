@@ -1,65 +1,306 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Searchmed" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:accordion="http://schemas.android.com/apk/res-auto/com.example.pulcer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
 
-    <ListView
-        android:id="@+id/lvUlcers"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_above="@+id/btnUlcerBack"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp" >
-    </ListView>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="400dp" >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/lvUlcers"
-        android:layout_alignLeft="@+id/lblStage"
-        android:layout_marginBottom="34dp"
-        android:gravity="center"
-        android:text="Description" 
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <com.me.pulcer.widget.AccordionView
+            android:id="@+id/accordion_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            accordion:header_layout_fold_button_id="@id/foldButton"
+            accordion:header_layout_id="@layout/accordion_header"
+            accordion:header_layout_label_id="@id/foldText"
+            accordion:header_layout_subtext_id="@id/foldSubtext"
+            accordion:section_bottom="@layout/accordion_footer"
+            accordion:section_container="@layout/accordion_section"
+            accordion:section_container_parent="@id/section_content"
+            accordion:section_headers="@array/accordion_ulcer_sections"
+            accordion:section_visibility="@array/accordion_ulcer_visibility"
+            android:background="#fff5f5f5"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/lblStage"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
-        android:layout_alignLeft="@+id/lvUlcers"
-        android:layout_marginBottom="15dp"
-        android:gravity="center"
-        android:text="Stage"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+            <RadioGroup
+		        android:id="@+id/radioStage"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/stage1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateSensorySubtext"
+		            android:text="@string/stage1" />
+		 
+		        <RadioButton
+		            android:id="@+id/stage2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateSensorySubtext"
+		            android:text="@string/stage2" />
+		        
+		        <RadioButton
+		            android:id="@+id/stage3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateSensorySubtext"
+		            android:text="@string/stage3" />
+		        
+		        <RadioButton
+		            android:id="@+id/stage4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateSensorySubtext"
+		            android:text="@string/stage4" />
+		        
+		        <RadioButton
+		            android:id="@+id/stage5"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateSensorySubtext"
+		            android:text="@string/stage5" />
+	 
+	    	</RadioGroup>
 
-    <Button
-        android:id="@+id/btnAddDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="Add Date" />
+            <RadioGroup
+		        android:id="@+id/radioHealing"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/healing0"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMoistureSubtext"
+		            android:text="@string/healing0" />
+		 
+		        <RadioButton
+		            android:id="@+id/healing1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMoistureSubtext"
+		            android:text="@string/healing1" />
+		        
+		        <RadioButton
+		            android:id="@+id/healing2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateMoistureSubtext"
+		            android:text="@string/healing2" />
+	 
+	    	</RadioGroup>
 
-    <Button
-        android:id="@+id/btnUlcerBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="Back" />
+            <RadioGroup
+		        android:id="@+id/radioInternal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/internal0"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/internal0" />
+		 
+		        <RadioButton
+		            android:id="@+id/internal1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/internal1" />
+		        
+		        <RadioButton
+		            android:id="@+id/internal2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/internal2" />
+		        
+		        <RadioButton
+		            android:id="@+id/internal3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/internal3" />
+		        
+		        <RadioButton
+		            android:id="@+id/internal4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/internal4" />
+		 
+		        <RadioButton
+		            android:id="@+id/internal5"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/internal5" />
+		        
+		        <RadioButton
+		            android:id="@+id/internal6"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/internal6" />
+		        
+		        <RadioButton
+		            android:id="@+id/internal7"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/internal7" />
+	 
+	    	</RadioGroup>
+	    	
+            <RadioGroup
+		        android:id="@+id/radioLocation"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+ 
+		        <RadioButton
+		            android:id="@+id/location0"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location0" />
+		 
+		        <RadioButton
+		            android:id="@+id/location1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location1" />
+		        
+		        <RadioButton
+		            android:id="@+id/location2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location2" />
+		        
+		        <RadioButton
+		            android:id="@+id/location3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location3" />
+		        
+		        <RadioButton
+		            android:id="@+id/location4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location4" />
+		 
+		        <RadioButton
+		            android:id="@+id/location5"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location5" />
+		        
+		        <RadioButton
+		            android:id="@+id/location6"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location6" />
+		        
+		        <RadioButton
+		            android:id="@+id/location7"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location7" />
+		        
+		        <RadioButton
+		            android:id="@+id/location8"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location8" />
+		        
+		        <RadioButton
+		            android:id="@+id/location9"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location9" />
+		        
+		        <RadioButton
+		            android:id="@+id/location10"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location10" />
+		        
+		        <RadioButton
+		            android:id="@+id/location11"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location11" />
+		        
+		        <RadioButton
+		            android:id="@+id/location12"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location12" />
+		        
+		        <RadioButton
+		            android:id="@+id/location13"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location13" />
+		        
+		        <RadioButton
+		            android:id="@+id/location14"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location14" />
+		        
+		        <RadioButton
+		            android:id="@+id/location15"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location15" />
+		        
+		        <RadioButton
+		            android:id="@+id/location16"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location16" />
+		        
+		        <RadioButton
+		            android:id="@+id/location17"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="updateActivitySubtext"
+		            android:text="@string/location17" />
+	 
+	    	</RadioGroup>
 
-    <Gallery
-        android:id="@+id/gallery1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
+        </com.me.pulcer.widget.AccordionView>
+        
+        </ScrollView>
+        
+        <Button
+            android:id="@+id/submitUlcer"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:onClick="submitUlcer"
+            android:text="@string/submit" />
 
-</RelativeLayout>
+</LinearLayout>
